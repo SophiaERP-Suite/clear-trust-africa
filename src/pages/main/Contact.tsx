@@ -110,7 +110,7 @@ const Contact = () => {
               </div>
               <div className="image-area">
                 <img
-                  src="/assets/main/images/story/17.webp"
+                  src="/assets/main/images/bg/ct_alpha_1.jpg"
                   width="645"
                   alt=""
                 />
@@ -137,7 +137,7 @@ const Contact = () => {
               </div>
               <div className="image-area">
                 <img
-                  src="/assets/main/images/story/18.webp"
+                  src="/assets/main/images/bg/ct_alpha_2.jpg"
                   width="645"
                   alt=""
                 />
@@ -161,7 +161,7 @@ const Contact = () => {
             <div className="col-lg-5">
               <div className="aapoiment-left-area-thumbnail">
                 <img
-                  src="/assets/main/images/appoinment/01.webp"
+                  src="/assets/main/images/bg/ct_coontact.jpg"
                   alt="appoinment"
                 />
               </div>

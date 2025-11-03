@@ -124,7 +124,9 @@ const PrivacyPolicy = () => {
                 <h4>9. Contact Us</h4>
                 <h6>For privacy questions, please contact us at:</h6>
                 <pre>
-                  <a href="info@alphachildcare.com">info@alphachildcare.com</a>
+                  <a href="mailto:info@alphachildcare.com">
+                    info@alphachildcare.com
+                  </a>
                 </pre>
                 <pre>
                   <a href="tel:+442084691888">+44 20 8469 1888</a>{" "}
