@@ -137,7 +137,7 @@ const Services = () => {
                         <div className="thumbnail invers-anime">
                           <img
                             className="radius-small"
-                            src="/assets/main/images/about/03.webp"
+                            src="/assets/main/images/bg/ct_basic_check.jpg"
                             alt="Corporate Image"
                           />
                         </div>
@@ -218,7 +218,7 @@ const Services = () => {
                         <div className="thumbnail invers-anime">
                           <img
                             className="radius-small"
-                            src="/assets/main/images/about/03.webp"
+                            src="/assets/main/images/bg/ct_standard_check.jpg"
                             alt="Corporate Image"
                           />
                         </div>
