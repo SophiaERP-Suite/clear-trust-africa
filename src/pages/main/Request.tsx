@@ -1,12 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { RequestContext } from "../../utils/main/Context";
 
 const Request = () => {
+  const { requestType } = useContext(RequestContext);
   const [requestObj, setRequestObj] = useState<{
     type: "basic" | "standard" | "enhanced";
     stage: number;
     paymentMethod: "card" | "transfer";
   }>({
-    type: "basic",
+    type: requestType,
     stage: 0,
     paymentMethod: "card",
   });
@@ -19,6 +21,10 @@ const Request = () => {
 
   const containerRef = useRef<HTMLDivElement>(null!);
   const headingRef = useRef<HTMLDivElement>(null!);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
 
   useEffect(() => {
     if (serviceDescriptionRef.current) {

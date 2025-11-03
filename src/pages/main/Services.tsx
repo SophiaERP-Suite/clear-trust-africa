@@ -1,4 +1,21 @@
+import { useContext } from "react";
+import { RequestContext } from "../../utils/main/Context";
+import { useNavigate } from "react-router-dom";
+
 const Services = () => {
+  const { setRequestType } = useContext(RequestContext);
+
+  const navigate = useNavigate();
+
+  const requestService =
+    (type: "basic" | "standard" | "enhanced") =>
+    (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+
+      setRequestType(type);
+      navigate("/request");
+    };
+
   return (
     <div className="main-content">
       {/* Banner Area */}
@@ -105,6 +122,7 @@ const Services = () => {
                         <a
                           className="tmp-btn btn-primary round btn-large"
                           href="/request"
+                          onClick={requestService("basic")}
                         >
                           Request Service
                         </a>
@@ -185,6 +203,7 @@ const Services = () => {
                         <a
                           className="tmp-btn btn-primary round btn-large"
                           href="/request"
+                          onClick={requestService("standard")}
                         >
                           Request Service
                         </a>
@@ -263,6 +282,7 @@ const Services = () => {
                         <a
                           className="tmp-btn btn-primary round btn-large"
                           href="/request"
+                          onClick={requestService("enhanced")}
                         >
                           Request Service
                         </a>
