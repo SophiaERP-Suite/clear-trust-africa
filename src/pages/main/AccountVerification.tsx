@@ -46,7 +46,12 @@ const AccountVerification = () => {
   return (
     <>
       {/* Banner Area */}
-      <div className="pages-banner">
+      <div
+        className="pages-banner"
+        style={{
+          background: "url(/assets/main/images/bg/ct_account_verification.jpg)",
+        }}
+      >
         <div className="pages-banner-content">
           <h2>Verify Your Account</h2>
 
