@@ -19,7 +19,12 @@ const Services = () => {
   return (
     <div className="main-content">
       {/* Banner Area */}
-      <div className="pages-banner">
+      <div
+        className="pages-banner"
+        style={{
+          background: "url(/assets/main/images/bg/ct_services.jpg)",
+        }}
+      >
         <div className="pages-banner-content">
           <h2>Our Services</h2>
           <ul>

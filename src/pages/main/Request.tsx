@@ -66,7 +66,9 @@ const Request = () => {
       {/* Banner Area */}
       <div
         className="pages-banner"
-        style={{ background: "url(/assets/main/images/bg/ct_about_us.jpg)" }}
+        style={{
+          background: "url(/assets/main/images/bg/ct_request_banner.jpg)",
+        }}
       >
         <div className="pages-banner-content">
           <h2>Request a DBS Check</h2>
