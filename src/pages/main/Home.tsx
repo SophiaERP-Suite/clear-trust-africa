@@ -44,28 +44,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="line-effect">
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                    </div> */}
           </div>
 
           <div className="slider-area slider-style-2 d-flex variation-2 height-850 bg_image bg_image--13">
@@ -105,28 +83,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="line-effect">
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                    </div> */}
           </div>
 
           <div className="slider-area slider-style-2 d-flex variation-2 height-850 bg_image bg_image--19">
@@ -166,28 +122,6 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="line-effect">
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                        <div className="line"></div>
-                    </div> */}
           </div>
         </div>
         {/* End Slider Area  */}
@@ -1604,15 +1538,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                         </div>
                       </div>
                     </div>
-                    {/* <div className="shape-image wow move-out">
-                                        <img src="./assets/main/images/shape/01.png" alt="call-to-action">
-                                    </div> */}
                     <div className="person-stand images-left-right-float">
-                      {/* <img
-                        loading="lazy"
-                        src="./assets/main/images/call-to-action/01.png"
-                        alt="call-to-action"
-                      /> */}
                     </div>
                     <div className="bg-shape-area-cta-main tmponhover">
                       <img
