@@ -229,9 +229,9 @@ const Home = () => {
                     roles and quick verification.
                   </p>
                   <div className="discover-btn mt--30">
-                    <a
+                    <NavLink
                       className="tmp-btn round btn-small btn-border hover-icon-reverse"
-                      href="/services#basic-check"
+                      to="/services#basic-check"
                     >
                       <span className="icon-reverse-wrapper">
                         <span className="btn-text">Discover services</span>
@@ -242,7 +242,7 @@ const Home = () => {
                           <i className="feather-arrow-right"></i>
                         </span>
                       </span>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="shape-service-1">
@@ -272,9 +272,9 @@ const Home = () => {
                     positions requiring more thorough screening.
                   </p>
                   <div className="discover-btn mt--30">
-                    <a
+                    <NavLink
                       className="tmp-btn round btn-small btn-border hover-icon-reverse"
-                      href="/services#standard-check"
+                      to="/services#standard-check"
                     >
                       <span className="icon-reverse-wrapper">
                         <span className="btn-text">Discover services</span>
@@ -285,7 +285,7 @@ const Home = () => {
                           <i className="feather-arrow-right"></i>
                         </span>
                       </span>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="shape-service-1">
@@ -315,9 +315,9 @@ const Home = () => {
                     high-risk roles and regulated work.
                   </p>
                   <div className="discover-btn mt--30">
-                    <a
+                    <NavLink
                       className="tmp-btn round btn-small btn-border hover-icon-reverse"
-                      href="/services#enhanced-check"
+                      to="/services#enhanced-check"
                     >
                       <span className="icon-reverse-wrapper">
                         <span className="btn-text">Discover services</span>
@@ -328,7 +328,7 @@ const Home = () => {
                           <i className="feather-arrow-right"></i>
                         </span>
                       </span>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="shape-service-1">
