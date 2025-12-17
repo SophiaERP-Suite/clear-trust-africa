@@ -49,7 +49,7 @@ const Signup = () => {
       {/* Banner Area */}
       <div
         className="pages-banner"
-        style={{ background: "url(/assets/main/images/bg/ct_register.jpg)" }}
+        style={{ background: "url(./assets/main/images/bg/ct_register.jpg)" }}
       >
         <div className="pages-banner-content">
           <h2>

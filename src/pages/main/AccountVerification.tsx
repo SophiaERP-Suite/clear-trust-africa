@@ -50,7 +50,7 @@ const AccountVerification = () => {
       <div
         className="pages-banner"
         style={{
-          background: "url(/assets/main/images/bg/ct_account_verification.jpg)",
+          background: "url(./assets/main/images/bg/ct_account_verification.jpg)",
         }}
       >
         <div className="pages-banner-content">

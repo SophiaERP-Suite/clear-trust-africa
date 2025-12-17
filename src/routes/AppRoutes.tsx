@@ -32,7 +32,7 @@ function AppRoutes() {
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-and-condition" element={<Terms />} />
       </Route>
-      <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   );
 }

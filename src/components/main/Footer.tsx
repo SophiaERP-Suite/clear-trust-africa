@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
               <div className="tmp-footer-widget">
                 <div className="logo">
-                  <NavLink to="/">
+                  <NavLink to="/home">
                     <img
                       className="logo-light"
                       src="./assets/main/images/logo/clear3.png"

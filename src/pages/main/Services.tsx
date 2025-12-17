@@ -22,7 +22,7 @@ const Services = () => {
       <div
         className="pages-banner"
         style={{
-          background: "url(/assets/main/images/bg/ct_services.jpg)",
+          background: "url(./assets/main/images/bg/ct_services.jpg)",
         }}
       >
         <div className="pages-banner-content">

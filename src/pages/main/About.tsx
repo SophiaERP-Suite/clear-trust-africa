@@ -6,7 +6,7 @@ const About = () => {
       {/* Banner Area */}
       <div
         className="pages-banner"
-        style={{ background: "url(/assets/main/images/bg/ct_about_us.jpg)" }}
+        style={{ background: "url(./assets/main/images/bg/ct_about_us.jpg)" }}
       >
         <div className="pages-banner-content">
           <h2>About Our Organization</h2>

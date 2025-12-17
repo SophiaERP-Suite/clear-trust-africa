@@ -68,7 +68,7 @@ const Request = () => {
       <div
         className="pages-banner"
         style={{
-          background: "url(/assets/main/images/bg/ct_request_banner.jpg)",
+          background: "url(./assets/main/images/bg/ct_request_banner.jpg)",
         }}
       >
         <div className="pages-banner-content">

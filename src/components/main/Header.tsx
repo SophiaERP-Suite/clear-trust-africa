@@ -84,7 +84,7 @@ const Header = () => {
           <div className="row align-items-center row--0">
             <div className="col-xl-2 col-lg-2 col-md-6 col-4">
               <div className="logo">
-                <NavLink to="/">
+                <NavLink to="/home">
                   <img
                     className="logo-light"
                     src="./assets/main/images/logo/clear3.png"
@@ -103,7 +103,7 @@ const Header = () => {
                 <nav className="mainmenu-nav d-none d-lg-block">
                   <ul className="mainmenu">
                     <li>
-                      <NavLink to="/">Home</NavLink>
+                      <NavLink to="/home">Home</NavLink>
                     </li>
                     <li>
                       <NavLink to="#">How it works</NavLink>
@@ -196,7 +196,7 @@ const Header = () => {
         <div className="inner">
           <div className="header-top">
             <div className="logo">
-              <NavLink to="/">
+              <NavLink to="/home">
                 <img
                   className="logo-light"
                   src="./assets/main/images/logo/logo.png"
@@ -217,7 +217,7 @@ const Header = () => {
           </div>
           <ul className="mainmenu">
             <li className="with-megamenu has-menu-child-item">
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/home">Home</NavLink>
               <div className="tmp-megamenu with-mega-item-2 full-width-mega">
                 <div className="wrapper demos-area-drop-down">
                   <div className="row row--0">
