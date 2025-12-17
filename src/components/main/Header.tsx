@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { RegisterContext } from "../../utils/main/Context";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 
 const secondHeaderPaths = ["login", "privacy-policy", "terms-and-condition"];
@@ -37,35 +37,32 @@ const Header = () => {
                   <p>
                     <i data-feather="phone"></i>
                     <span>
-                      <a href="tel:+442084691888">+44 20 8469 1888</a>
+                      <NavLink to="#">+44 20 8469 1888</NavLink>
                     </span>
                   </p>
                 </div>
                 <div className="social-icon-wrapper">
                   <ul className="social-icon social-default icon-naked">
                     <li>
-                      <a
-                        href="https://www.facebook.com/Alpha_Childcare-100153735026940"
+                      <NavLink to="#"
                         target="_blank"
                       >
                         <i data-feather="facebook"></i>
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a
-                        href="https://www.youtube.com/channel/UCF6CTF2_t9GokCgUQ_6eT1A"
+                      <NavLink to="#"
                         target="_blank"
                       >
                         <i data-feather="youtube"></i>
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a
-                        href="https://www.instagram.com/alpha_childcare/"
+                      <NavLink to="#"
                         target="_blank"
                       >
                         <i data-feather="instagram"></i>
-                      </a>
+                      </NavLink>
                     </li>
                   </ul>
                 </div>
@@ -87,18 +84,18 @@ const Header = () => {
           <div className="row align-items-center row--0">
             <div className="col-xl-2 col-lg-2 col-md-6 col-4">
               <div className="logo">
-                <a href="index.html">
+                <NavLink to="/">
                   <img
                     className="logo-light"
-                    src="/assets/main/images/logo/clear3.png"
+                    src="./assets/main/images/logo/clear3.png"
                     alt="Corporate Logo"
                   />
                   <img
                     className="logo-dark"
-                    src="/assets/main/images/logo/clear.png"
+                    src="./assets/main/images/logo/clear.png"
                     alt="Corporate Logo"
                   />
-                </a>
+                </NavLink>
               </div>
             </div>
             <div className="col-xl-10 col-lg-10 col-md-6 col-8 position-static">
@@ -106,20 +103,20 @@ const Header = () => {
                 <nav className="mainmenu-nav d-none d-lg-block">
                   <ul className="mainmenu">
                     <li>
-                      <a href="/">Home</a>
+                      <NavLink to="/">Home</NavLink>
                     </li>
                     <li>
-                      <a href="#">How it works</a>
+                      <NavLink to="#">How it works</NavLink>
                     </li>
                     <li className="with-megamenu">
-                      <a href="/services">Services</a>
+                      <NavLink to="/services">Services</NavLink>
                     </li>
                     <li className="with-megamenu">
-                      <a href="/request">Request </a>
+                      <NavLink to="/request">Request </NavLink>
                     </li>
 
                     <li>
-                      <a href="/login">Login</a>
+                      <NavLink to="/login">Login</NavLink>
                     </li>
                   </ul>
                 </nav>
@@ -127,7 +124,7 @@ const Header = () => {
                 {/* Start Header Btn  */}
                 <div className="header-btn">
                   <div className="dot-btn">
-                    <img src="/assets/main/images/shop/dot.svg" alt="" />
+                    <img src="./assets/main/images/shop/dot.svg" alt="" />
                     <span className="offcanvas-trigger">
                       <span className="offcanvas-bars">
                         <span></span>
@@ -137,9 +134,9 @@ const Header = () => {
                     </span>
                   </div>
                   <div className="get-started-box">
-                    <a className="tmp-btn round  get-started-btn">
+                    <NavLink to="#" className="tmp-btn round  get-started-btn">
                       Get Started
-                    </a>
+                    </NavLink>
 
                     <ul>
                       <li>
@@ -199,18 +196,18 @@ const Header = () => {
         <div className="inner">
           <div className="header-top">
             <div className="logo">
-              <a href="index.html">
+              <NavLink to="/">
                 <img
                   className="logo-light"
-                  src="/assets/main/images/logo/logo.png"
+                  src="./assets/main/images/logo/logo.png"
                   alt="Corporate Logo"
                 />
                 <img
                   className="logo-dark"
-                  src="/assets/main/images/logo/logo-dark.png"
+                  src="./assets/main/images/logo/logo-dark.png"
                   alt="Corporate Logo"
                 />
-              </a>
+              </NavLink>
             </div>
             <div className="close-menu">
               <button className="close-button">
@@ -220,7 +217,7 @@ const Header = () => {
           </div>
           <ul className="mainmenu">
             <li className="with-megamenu has-menu-child-item">
-              <a href="#">Home</a>
+              <NavLink to="/">Home</NavLink>
               <div className="tmp-megamenu with-mega-item-2 full-width-mega">
                 <div className="wrapper demos-area-drop-down">
                   <div className="row row--0">
@@ -251,627 +248,589 @@ const Header = () => {
                             {/* multipage area start */}
                             <ul className="mega-menu-item">
                               <li>
-                                <a
-                                  href="01-index-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/01-business-consulting.webp"
+                                    src="./assets/main/images/demo/01-business-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="01-index-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Popular
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-01-index-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-01-business-consulting.webp"
+                                    src="./assets/main/images/demo/white-01-business-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-01-index-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Popular
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="02-index-business-consulting-2.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/02-business-consulting-2.webp"
+                                    src="./assets/main/images/demo/02-business-consulting-2.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="02-index-business-consulting-2.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-02-index-business-consulting-2.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-02-business-consulting-2.webp"
+                                    src="./assets/main/images/demo/white-02-business-consulting-2.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-02-index-business-consulting-2.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="03-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/03-agency.webp"
+                                    src="./assets/main/images/demo/03-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="03-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Agency{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-03-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-03-agency.webp"
+                                    src="./assets/main/images/demo/white-03-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-03-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Agency{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="04-services-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/04-services-agency.webp"
+                                    src="./assets/main/images/demo/04-services-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="04-services-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Services Agency
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-04-services-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-04-services-agency.webp"
+                                    src="./assets/main/images/demo/white-04-services-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-04-services-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Services Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="05-corporate.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/05-corporate.webp"
+                                    src="./assets/main/images/demo/05-corporate.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="05-corporate.html">Corporate</a>
+                                </NavLink>
+                                <NavLink to="#">Corporate</NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-05-corporate.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-05-corporate.webp"
+                                    src="./assets/main/images/demo/white-05-corporate.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-05-corporate.html">Corporate</a>
+                                </NavLink>
+                                <NavLink to="#">Corporate</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="11-hr-website.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/11-personal-portfolio.webp"
+                                    src="./assets/main/images/demo/11-personal-portfolio.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="11-hr-website.html">HR Website</a>
+                                </NavLink>
+                                <NavLink to="#">HR Website</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-11-hr-website.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-11-personal-portfolio.webp"
+                                    src="./assets/main/images/demo/white-11-personal-portfolio.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-11-hr-website.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   HR Website
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="06-startup.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/06-startup.webp"
+                                    src="./assets/main/images/demo/06-startup.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="06-startup.html">Startup Business</a>
+                                </NavLink>
+                                <NavLink to="#">Startup Business</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-06-startup.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-06-startup.webp"
+                                    src="./assets/main/images/demo/white-06-startup.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-06-startup.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Startup Business
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="07-creative-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/07-creative-agency.webp"
+                                    src="./assets/main/images/demo/07-creative-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="07-creative-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Creative Agency
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-07-creative-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-07-creative-agency.webp"
+                                    src="./assets/main/images/demo/white-07-creative-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-07-creative-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Creative Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="08-business.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/08-business.webp"
+                                    src="./assets/main/images/demo/08-business.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="08-business.html">Business</a>
+                                </NavLink>
+                                <NavLink to="#">Business</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-08-business.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-08-business.webp"
+                                    src="./assets/main/images/demo/white-08-business.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-08-business.html">Business</a>
+                                </NavLink>
+                                <NavLink to="#">Business</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="09-digital-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/09-digital-agency.webp"
+                                    src="./assets/main/images/demo/09-digital-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="09-digital-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Digital Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-09-digital-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-09-digital-agency.webp"
+                                    src="./assets/main/images/demo/white-09-digital-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-09-digital-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Digital Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="10-marketing-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/10-marketing-agency.webp"
+                                    src="./assets/main/images/demo/10-marketing-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="10-marketing-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Marketing Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-10-marketing-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-10-marketing-agency.webp"
+                                    src="./assets/main/images/demo/white-10-marketing-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-10-marketing-agency.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Marketing Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="12-index-business-consulting-3.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/12-index-business-consulting-3.webp"
+                                    src="./assets/main/images/demo/12-index-business-consulting-3.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="12-index-business-consulting-3.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting 3
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-12-index-business-consulting-3.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-12-index-business-consulting-3.webp"
+                                    src="./assets/main/images/demo/white-12-index-business-consulting-3.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-12-index-business-consulting-3.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting 3
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="13-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/13-agency.webp"
+                                    src="./assets/main/images/demo/13-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="13-agency.html">Agency 2</a>
+                                </NavLink>
+                                <NavLink to="#">Agency 2</NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-13-agency.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-13-agency.webp"
+                                    src="./assets/main/images/demo/white-13-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-13-agency.html">Agency 2</a>
+                                </NavLink>
+                                <NavLink to="#">Agency 2</NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="14-financial-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/14-financial-consulting.webp"
+                                    src="./assets/main/images/demo/14-financial-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="14-financial-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Financial Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-14-financial-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-14-financial-consulting.webp"
+                                    src="./assets/main/images/demo/white-14-financial-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-14-financial-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Financial Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="15-business-coach.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/15-business-coach.webp"
+                                    src="./assets/main/images/demo/15-business-coach.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="15-business-coach.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Coach
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-15-business-coach.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-15-business-coach.webp"
+                                    src="./assets/main/images/demo/white-15-business-coach.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-15-business-coach.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Coach
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="16-real-estate-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/16-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/16-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="16-real-estate-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-16-real-estate-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-16-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/white-16-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-16-real-estate-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="17-real-estate-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/17-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/17-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="17-real-estate-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting 2
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="white-17-real-estate-consulting.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-17-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/white-17-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-17-real-estate-consulting.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting 2
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="18-it-solution.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/18-it-solution.webp"
+                                    src="./assets/main/images/demo/18-it-solution.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="18-it-solution.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   It Company{" "}
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-18-it-solution.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-18-it-solution.webp"
+                                    src="./assets/main/images/demo/white-18-it-solution.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-18-it-solution.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   It Company{" "}
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="19-personal-advisory.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/19-personal-advisory.webp"
+                                    src="./assets/main/images/demo/19-personal-advisory.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="19-personal-advisory.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Personal Advisory
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="white-19-personal-advisory.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-19-personal-advisory.webp"
+                                    src="./assets/main/images/demo/white-19-personal-advisory.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="white-19-personal-advisory.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Personal Advisory
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a href="#" className="thumbnail-demos">
+                                <NavLink to="#" className="thumbnail-demos">
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/coming-soon.webp"
+                                    src="./assets/main/images/demo/coming-soon.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="#">
+                                </NavLink>
+                                <NavLink to="#">
                                   SEO Website{" "}
                                   <span className="tmp-badge-card success">
                                     Coming Soon
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                             </ul>
                             {/* multipage area end */}
@@ -881,621 +840,583 @@ const Header = () => {
                             {/* multipage area start */}
                             <ul className="mega-menu-item">
                               <li>
-                                <a
-                                  href="onepage-one.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/01-business-consulting.webp"
+                                    src="./assets/main/images/demo/01-business-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-one.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Popular
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-one-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-01-business-consulting.webp"
+                                    src="./assets/main/images/demo/white-01-business-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-one-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Popular
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-two.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/02-business-consulting-2.webp"
+                                    src="./assets/main/images/demo/02-business-consulting-2.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-two.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-two-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-02-business-consulting-2.webp"
+                                    src="./assets/main/images/demo/white-02-business-consulting-2.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-two-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-three.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/03-agency.webp"
+                                    src="./assets/main/images/demo/03-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-three.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Agency{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-three-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-03-agency.webp"
+                                    src="./assets/main/images/demo/white-03-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-three-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Agency{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-four.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/04-services-agency.webp"
+                                    src="./assets/main/images/demo/04-services-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-four.html">Services Agency</a>
+                                </NavLink>
+                                <NavLink to="#">Services Agency</NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-four-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-04-services-agency.webp"
+                                    src="./assets/main/images/demo/white-04-services-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-four-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Services Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-five.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/05-corporate.webp"
+                                    src="./assets/main/images/demo/05-corporate.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-five.html">Corporate</a>
+                                </NavLink>
+                                <NavLink to="#">Corporate</NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-five-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-05-corporate.webp"
+                                    src="./assets/main/images/demo/white-05-corporate.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-five-white.html">Corporate</a>
+                                </NavLink>
+                                <NavLink to="#">Corporate</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-eleven.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/11-personal-portfolio.webp"
+                                    src="./assets/main/images/demo/11-personal-portfolio.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-eleven.html">HR Website</a>
+                                </NavLink>
+                                <NavLink to="#">HR Website</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-eleven-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-11-personal-portfolio.webp"
+                                    src="./assets/main/images/demo/white-11-personal-portfolio.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-eleven-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   HR Website
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-six.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/06-startup.webp"
+                                    src="./assets/main/images/demo/06-startup.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-six.html">Startup Business</a>
+                                </NavLink>
+                                <NavLink to="#">Startup Business</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-six-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-06-startup.webp"
+                                    src="./assets/main/images/demo/white-06-startup.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-six-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Startup Business
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-seven.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/07-creative-agency.webp"
+                                    src="./assets/main/images/demo/07-creative-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-seven.html">Creative Agency</a>
+                                </NavLink>
+                                <NavLink to="#">Creative Agency</NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-seven-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-07-creative-agency.webp"
+                                    src="./assets/main/images/demo/white-07-creative-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-seven-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Creative Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-eight.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/08-business.webp"
+                                    src="./assets/main/images/demo/08-business.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-eight.html">Business</a>
+                                </NavLink>
+                                <NavLink to="#">Business</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-eight-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-08-business.webp"
+                                    src="./assets/main/images/demo/white-08-business.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-eight-white.html">Business</a>
+                                </NavLink>
+                                <NavLink to="#">Business</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-nine.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/09-digital-agency.webp"
+                                    src="./assets/main/images/demo/09-digital-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-nine.html">Digital Agency</a>
+                                </NavLink>
+                                <NavLink to="#">Digital Agency</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-nine-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-09-digital-agency.webp"
+                                    src="./assets/main/images/demo/white-09-digital-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-nine-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Digital Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-ten.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/10-marketing-agency.webp"
+                                    src="./assets/main/images/demo/10-marketing-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-ten.html">Marketing Agency</a>
+                                </NavLink>
+                                <NavLink to="#">Marketing Agency</NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-ten-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-10-marketing-agency.webp"
+                                    src="./assets/main/images/demo/white-10-marketing-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-ten-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Marketing Agency
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-twelve.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/12-index-business-consulting-3.webp"
+                                    src="./assets/main/images/demo/12-index-business-consulting-3.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-twelve.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting 3
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-twelve-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-12-index-business-consulting-3.webp"
+                                    src="./assets/main/images/demo/white-12-index-business-consulting-3.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-twelve-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Consulting 3
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-thirteen.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/13-agency.webp"
+                                    src="./assets/main/images/demo/13-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-thirteen.html">Agency 2</a>
+                                </NavLink>
+                                <NavLink to="#">Agency 2</NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-thirteen-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-13-agency.webp"
+                                    src="./assets/main/images/demo/white-13-agency.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-thirteen-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Agency 2
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-fourteen.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/14-financial-consulting.webp"
+                                    src="./assets/main/images/demo/14-financial-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-fourteen.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Financial Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-fourteen-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-14-financial-consulting.webp"
+                                    src="./assets/main/images/demo/white-14-financial-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-fourteen-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Financial Consulting{" "}
                                   <span className="tmp-badge-card success">
                                     Hot
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-fifteen.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/15-business-coach.webp"
+                                    src="./assets/main/images/demo/15-business-coach.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-fifteen.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Coach
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-fifteen-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-15-business-coach.webp"
+                                    src="./assets/main/images/demo/white-15-business-coach.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-fifteen-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Business Coach
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-sixteen.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/16-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/16-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-sixteen.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-sixteen-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-16-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/white-16-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-sixteen-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-seventeen.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/17-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/17-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-seventeen.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting 2
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-seventeen-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-17-real-estate-consulting.webp"
+                                    src="./assets/main/images/demo/white-17-real-estate-consulting.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-seventeen-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Real Estate Consulting 2
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-eighteen.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/18-it-solution.webp"
+                                    src="./assets/main/images/demo/18-it-solution.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-eighteen.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   It Company{" "}
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-eighteen-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-18-it-solution.webp"
+                                    src="./assets/main/images/demo/white-18-it-solution.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-eighteen-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   It Company{" "}
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
 
                               <li>
-                                <a
-                                  href="onepage-nineteen.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/19-personal-advisory.webp"
+                                    src="./assets/main/images/demo/19-personal-advisory.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-nineteen.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Personal Advisory
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a
-                                  href="onepage-nineteen-white.html"
+                                <NavLink to="#"
                                   className="thumbnail-demos"
                                 >
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/white-19-personal-advisory.webp"
+                                    src="./assets/main/images/demo/white-19-personal-advisory.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="onepage-nineteen-white.html">
+                                </NavLink>
+                                <NavLink to="#">
                                   Personal Advisory
                                   <span className="tmp-badge-card success">
                                     New
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                               <li>
-                                <a href="#" className="thumbnail-demos">
+                                <NavLink to="#" className="thumbnail-demos">
                                   <img
                                     loading="lazy"
-                                    src="/assets/main/images/demo/coming-soon.webp"
+                                    src="./assets/main/images/demo/coming-soon.webp"
                                     alt=""
                                   />
-                                </a>
-                                <a href="#">
+                                </NavLink>
+                                <NavLink to="#">
                                   SEO Website{" "}
                                   <span className="tmp-badge-card success">
                                     Coming Soon
                                   </span>
-                                </a>
+                                </NavLink>
                               </li>
                             </ul>
                             {/* multipage area end */}
@@ -1530,270 +1451,269 @@ const Header = () => {
               </div>
             </li>
             <li className="with-megamenu has-menu-child-item">
-              <a href="#">
+              <NavLink to="#">
                 Pages
                 {/* <i data-feather="more-vertical"></i> */}
-              </a>
+              </NavLink>
               <div className="tmp-megamenu with-mega-item-2 full-width-mega">
                 <div className="wrapper">
                   <div className="row row--0">
                     <div className="col-xl-2 col-lg-3 single-mega-item">
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="about.html">About Company</a>
+                          <NavLink to="#">About Company</NavLink>
                         </li>
                         <li>
-                          <a href="our-service.html">Our Service</a>
+                          <NavLink to="#">Our Service</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-two.html">Our Service Two</a>
+                          <NavLink to="#">Our Service Two</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-three.html">Our Service Three</a>
+                          <NavLink to="#">Our Service Three</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-four.html">Our Service Four</a>
+                          <NavLink to="#">Our Service Four</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-five.html">Our Service Five</a>
+                          <NavLink to="#">Our Service Five</NavLink>
                         </li>
                         <li>
-                          <a href="service-details-two.html">
+                          <NavLink to="#">
                             Service Details Two
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a href="service-details-three.html">
+                          <NavLink to="#">
                             Service Details Three
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a href="service-details-four.html">
+                          <NavLink to="#">
                             Service Details Four
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="service-details.html">Service Details</a>
+                          <NavLink to="#">Service Details</NavLink>
                         </li>
                         <li>
-                          <a href="team.html">Our Team</a>
+                          <NavLink to="#">Our Team</NavLink>
                         </li>
                         <li>
-                          <a href="team-two.html">Our Team Two</a>
+                          <NavLink to="#">Our Team Two</NavLink>
                         </li>
                         <li>
-                          <a href="our-history.html">
+                          <NavLink to="#">
                             Our History{" "}
                             <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="clients.html">
+                          <NavLink to="#">
                             Clients <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </div>
                     <div className="col-xl-2 col-lg-3 single-mega-item">
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="office-branch.html">
+                          <NavLink to="#">
                             Office Branch{" "}
                             <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="team-three.html">Our Team Three</a>
+                          <NavLink to="#">Our Team Three</NavLink>
                         </li>
                         <li>
-                          <a href="team-details.html">Team Details</a>
+                          <NavLink to="#">Team Details</NavLink>
                         </li>
                         <li>
-                          <a href="pricing.html">Pricing Plan</a>
+                          <NavLink to="#">Pricing Plan</NavLink>
                         </li>
                         <li>
-                          <a href="pricing-two.html">Pricing Plan Two</a>
+                          <NavLink to="#">Pricing Plan Two</NavLink>
                         </li>
                         <li>
-                          <a href="pricing-three.html">Pricing Plan Three</a>
+                          <NavLink to="#">Pricing Plan Three</NavLink>
                         </li>
                         <li>
-                          <a href="portfolio.html">Portfolio Default</a>
+                          <NavLink to="#">Portfolio Default</NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-three-column.html">
+                          <NavLink to="#">
                             Portfolio 3 Column
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-full-width.html">
+                          <NavLink to="#">
                             Portfolio Full Width
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-grid-layout.html">
+                          <NavLink to="#">
                             Portfolio Grid Layout
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-box-layout.html">
+                          <NavLink to="#">
                             Portfolio Box Layout
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-card-hover.html">
+                          <NavLink to="#">
                             Portfolio Card Hover
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-bottom-content.html">
+                          <NavLink to="#">
                             Portfolio with Content
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-details.html">Portfolio Details</a>
+                          <NavLink to="#">Portfolio Details</NavLink>
                         </li>
                       </ul>
                     </div>
                     <div className="col-xl-2 col-lg-3 single-mega-item">
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="portfolio-details-two.html">
+                          <NavLink to="#">
                             Portfolio Details Two
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-details-three.html">
+                          <NavLink to="#">
                             Portfolio Details Video
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-details-five.html">
+                          <NavLink to="#">
                             Portfolio Details Video
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="portfolio-details-four.html">
+                          <NavLink to="#">
                             Portfolio Details Slider
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="timeline.html">Working Process</a>
+                          <NavLink to="#">Working Process</NavLink>
                         </li>
                         <li>
-                          <a href="our-gallery.html">Our Gallery</a>
+                          <NavLink to="#">Our Gallery</NavLink>
                         </li>
                         <li>
-                          <a href="our-gallery-col-3.html">Gallery col 3</a>
+                          <NavLink to="#">Gallery col 3</NavLink>
                         </li>
                         <li>
-                          <a href="career.html">Career Oppertunity</a>
+                          <NavLink to="#">Career Oppertunity</NavLink>
                         </li>
                         <li>
-                          <a href="career-details.html">Career Details</a>
+                          <NavLink to="#">Career Details</NavLink>
                         </li>
                         <li>
-                          <a href="apply.html">Apply Job</a>
+                          <NavLink to="#">Apply Job</NavLink>
                         </li>
                         <li>
-                          <a href="blog-grid.html">Blog Grid</a>
+                          <NavLink to="#">Blog Grid</NavLink>
                         </li>
                         <li>
-                          <a href="blog-list-view.html">Blog List View</a>
+                          <NavLink to="#">Blog List View</NavLink>
                         </li>
                         <li>
-                          <a href="blog-bento.html">Blog Bento View</a>
+                          <NavLink to="#">Blog Bento View</NavLink>
                         </li>
                         <li>
-                          <a href="blog-details.html">Blog Details</a>
+                          <NavLink to="#">Blog Details</NavLink>
                         </li>
                       </ul>
                     </div>
                     <div className="col-xl-2 col-lg-3 single-mega-item">
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="blog-details-standard.html">
+                          <NavLink to="#">
                             Blog Standard{" "}
                             <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="faq.html">
+                          <NavLink to="#">
                             Faq's <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="testimonial.html">Testimonial</a>
+                          <NavLink to="#">Testimonial</NavLink>
                         </li>
                         <li>
-                          <a href="testimonial-two.html">Testimonial Two</a>
+                          <NavLink to="#">Testimonial Two</NavLink>
                         </li>
                         <li>
-                          <a href="testimonial-three.html">Testimonial Three</a>
+                          <NavLink to="#">Testimonial Three</NavLink>
                         </li>
                         <li>
-                          <a href="testimonial-modern.html">
+                          <NavLink to="#">
                             Testimonial Modern
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="contact.html">Contact Page</a>
+                          <NavLink to="#">Contact Page</NavLink>
                         </li>
 
                         <li>
-                          <a href="shop.html">
+                          <NavLink to="#">
                             Shop <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="shop-details.html">
+                          <NavLink to="#">
                             Shop Details
                             <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="cart.html">
+                          <NavLink to="#">
                             Cart <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="checkout.html">
+                          <NavLink to="#">
                             Checkout <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
 
                         <li>
-                          <a href="error.html">404 Page</a>
+                          <NavLink to="#">404 Page</NavLink>
                         </li>
                         <li>
-                          <a href="privacy-policy.html">Privacy Policy</a>
+                          <NavLink to="#">Privacy Policy</NavLink>
                         </li>
                         <li>
-                          <a href="terms-condition.html">Terms & Condition</a>
+                          <NavLink to="#">Terms & Condition</NavLink>
                         </li>
                       </ul>
                     </div>
 
                     <div className="col-xl-4 d-lg-none d-xl-block">
-                      <a
-                        href="contact.html"
+                      <NavLink to="#"
                         className="feature-image-add-header"
                       >
                         <img
                           loading="lazy"
-                          src="/assets/main/images/banner/header-contact-dark.webp"
+                          src="./assets/main/images/banner/header-contact-dark.webp"
                           alt="corporate-business"
                         />
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
               </div>
             </li>
             <li className="with-megamenu has-menu-child-item position-relative">
-              <a href="#">Service</a>
+              <NavLink to="#">Service</NavLink>
               <div className="tmp-megamenu width-small-mega">
                 <div className="wrapper">
                   <div className="row">
@@ -1814,29 +1734,29 @@ const Header = () => {
                       <h3 className="tmp-short-title">Service Layout</h3>
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="our-service.html">Our Service</a>
+                          <NavLink to="#">Our Service</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-two.html">Our Service Two</a>
+                          <NavLink to="#">Our Service Two</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-three.html">Our Service Three</a>
+                          <NavLink to="#">Our Service Three</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-four.html">Our Service Four</a>
+                          <NavLink to="#">Our Service Four</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-five.html">Our Service Five</a>
+                          <NavLink to="#">Our Service Five</NavLink>
                         </li>
                         <li>
-                          <a href="our-service-six.html">Our Service Six</a>
+                          <NavLink to="#">Our Service Six</NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a href="service-list.html">
+                          <NavLink to="#">
                             Service List Style{" "}
                             <span className="tmp-badge-card">New</span>
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -1844,47 +1764,47 @@ const Header = () => {
                       <h3 className="tmp-short-title">Service Details</h3>
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="service-details.html">
+                          <NavLink to="#">
                             Service Details{" "}
                             <span className="tmp-badge-card">Popular</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="service-details-center.html">
+                          <NavLink to="#">
                             Service Details center
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="service-details-two.html">
+                          <NavLink to="#">
                             Service Details Two
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a href="service-details-three.html">
+                          <NavLink to="#">
                             Service Details Three
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a href="service-details-four.html">
+                          <NavLink to="#">
                             Service Details Four
-                          </a>
+                          </NavLink>
                         </li>
 
                         <li>
                           {" "}
-                          <a href="#">
+                          <NavLink to="#">
                             Service List Style{" "}
                             <span className="tmp-badge-card">Coming</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a href="#">
+                          <NavLink to="#">
                             Service Details Six{" "}
                             <span className="tmp-badge-card">Coming</span>
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -1893,25 +1813,25 @@ const Header = () => {
                     <div className="col-lg-12">
                       <ul className="nav-quick-access">
                         <li>
-                          <a href="contact.html">
+                          <NavLink to="#">
                             <i data-feather="folder-minus"></i> Quick Start
                             Guide
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="contact.html">
+                          <NavLink to="#">
                             <i data-feather="folder-minus"></i> For Open Source
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="contact.html">
+                          <NavLink to="#">
                             <i data-feather="folder-minus"></i> API Status
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="contact.html">
+                          <NavLink to="#">
                             <i data-feather="folder-minus"></i> Support
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -1920,109 +1840,109 @@ const Header = () => {
               </div>
             </li>
             <li className="has-droupdown has-menu-child-item">
-              <a href="#">Project</a>
+              <NavLink to="#">Project</NavLink>
               <ul className="submenu">
                 <li>
-                  <a href="portfolio.html">Portfolio Default</a>
+                  <NavLink to="#">Portfolio Default</NavLink>
                 </li>
                 <li>
-                  <a href="portfolio-three-column.html">
+                  <NavLink to="#">
                     Portfolio Three Column
-                  </a>
+                  </NavLink>
                 </li>
                 <li>
-                  <a href="portfolio-full-width.html">Portfolio Full Width</a>
+                  <NavLink to="#">Portfolio Full Width</NavLink>
                 </li>
                 <li>
-                  <a href="portfolio-grid-layout.html">Portfolio Grid Layout</a>
+                  <NavLink to="#">Portfolio Grid Layout</NavLink>
                 </li>
                 <li>
-                  <a href="portfolio-box-layout.html">Portfolio Box Layout</a>
+                  <NavLink to="#">Portfolio Box Layout</NavLink>
                 </li>
                 <li>
-                  <a href="portfolio-card-hover.html">Portfolio Card Hover</a>
+                  <NavLink to="#">Portfolio Card Hover</NavLink>
                 </li>
                 <li>
-                  <a href="portfolio-bottom-content.html">
+                  <NavLink to="#">
                     Portfolio Bottom Content
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="has-third-lev">
-                  <a href="#">Portfolio Details</a>
+                  <NavLink to="#">Portfolio Details</NavLink>
                   <ul className="submenu">
                     <li>
-                      <a href="portfolio-details.html">Portfolio Details</a>
+                      <NavLink to="#">Portfolio Details</NavLink>
                     </li>
                     <li>
-                      <a href="portfolio-details-two.html">
+                      <NavLink to="#">
                         Portfolio Details Two
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="portfolio-details-three.html">
+                      <NavLink to="#">
                         Portfolio Details Video
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="portfolio-details-five.html">
+                      <NavLink to="#">
                         Portfolio Details Video 2
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="portfolio-details-four.html">
+                      <NavLink to="#">
                         Portfolio Details Slider
-                      </a>
+                      </NavLink>
                     </li>
                   </ul>
                 </li>
               </ul>
             </li>
             <li className="has-droupdown has-menu-child-item">
-              <a href="#">Blog</a>
+              <NavLink to="#">Blog</NavLink>
               <ul className="submenu">
                 <li>
-                  <a href="blog-grid.html">Blog Grid</a>
+                  <NavLink to="#">Blog Grid</NavLink>
                 </li>
                 <li>
-                  <a href="blog-list-view.html">Blog List View</a>
+                  <NavLink to="#">Blog List View</NavLink>
                 </li>
                 <li>
-                  <a href="blog-bento.html">Blog Bento</a>
+                  <NavLink to="#">Blog Bento</NavLink>
                 </li>
                 <li className="has-third-lev">
-                  <a href="#">Blog Details</a>
+                  <NavLink to="#">Blog Details</NavLink>
                   <ul className="submenu">
                     <li>
-                      <a href="blog-details.html">Blog Details</a>
+                      <NavLink to="#">Blog Details</NavLink>
                     </li>
                     <li>
-                      <a href="blog-details-standard.html">
+                      <NavLink to="#">
                         Details Standard{" "}
                         <span className="tmp-badge-card">New</span>
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="blog-details-sidebar.html">
+                      <NavLink to="#">
                         Blog Details Right Sidebar
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="blog-deails-sidebar-left.html">
+                      <NavLink to="#">
                         Blog Details Left Sidebar
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="blog-deails-video.html">Blog Details Video</a>
+                      <NavLink to="#">Blog Details Video</NavLink>
                     </li>
                     <li>
-                      <a href="blog-deails-video-two.html">
+                      <NavLink to="#">
                         Blog Details Video Two
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a href="blog-deails-video-popup.html">
+                      <NavLink to="#">
                         Blog Details Video Popup
-                      </a>
+                      </NavLink>
                     </li>
                   </ul>
                 </li>
@@ -2030,11 +1950,11 @@ const Header = () => {
             </li>
 
             <li>
-              <a href="contact.html">Contact</a>
+              <NavLink to="#">Contact</NavLink>
             </li>
 
             <li className="with-megamenu has-menu-child-item">
-              <a href="#">Elements</a>
+              <NavLink to="#">Elements</NavLink>
               <div className="tmp-megamenu with-mega-item-2 full-width-mega">
                 <div className="wrapper">
                   <div className="row row--0">
@@ -2042,7 +1962,7 @@ const Header = () => {
                       <div className="feature-image-add-header">
                         <img
                           loading="lazy"
-                          src="/assets/main/images/banner/04.webp"
+                          src="./assets/main/images/banner/04.webp"
                           alt="corporate-business"
                         />
                       </div>
@@ -2050,123 +1970,123 @@ const Header = () => {
                     <div className="col-lg-3 single-mega-item">
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="style-guide.html">
+                          <NavLink to="#">
                             Style Guide{" "}
                             <span className="tmp-badge-card">Hot</span>
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
-                          <a href="button.html">Button Page</a>
+                          <NavLink to="#">Button Page</NavLink>
                         </li>
                         <li>
-                          <a href="service.html">Our Service</a>
+                          <NavLink to="#">Our Service</NavLink>
                         </li>
                         <li>
-                          <a href="service-details.html">Service Details</a>
+                          <NavLink to="#">Service Details</NavLink>
                         </li>
                         <li>
-                          <a href="accordion.html">Accordion Style</a>
+                          <NavLink to="#">Accordion Style</NavLink>
                         </li>
                         <li>
-                          <a href="progressbar.html">Progressbar</a>
+                          <NavLink to="#">Progressbar</NavLink>
                         </li>
                         <li>
-                          <a href="blog-grid.html">Blog Grid</a>
-                        </li>
-
-                        <li>
-                          <a href="team.html">Our Team</a>
-                        </li>
-                        <li>
-                          <a href="modern-tab.html">Modern Tabs</a>
-                        </li>
-                        <li>
-                          <a href="social-share.html">Social Share</a>
+                          <NavLink to="#">Blog Grid</NavLink>
                         </li>
 
                         <li>
-                          <a href="brand.html">Brand Style</a>
+                          <NavLink to="#">Our Team</NavLink>
                         </li>
                         <li>
-                          <a href="contact.html">Contact Page</a>
+                          <NavLink to="#">Modern Tabs</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="#">Social Share</NavLink>
+                        </li>
+
+                        <li>
+                          <NavLink to="#">Brand Style</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="#">Contact Page</NavLink>
                         </li>
                       </ul>
                     </div>
                     <div className="col-lg-3 single-mega-item">
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="counter.html">Counter Up</a>
+                          <NavLink to="#">Counter Up</NavLink>
                         </li>
                         <li>
-                          <a href="gallery.html">Gallery</a>
-                        </li>
-
-                        <li>
-                          <a href="error.html">404 Page</a>
+                          <NavLink to="#">Gallery</NavLink>
                         </li>
 
                         <li>
-                          <a href="video.html">Video Style</a>
-                        </li>
-                        <li>
-                          <a href="portfolio.html">Our Portfolio</a>
-                        </li>
-                        <li>
-                          <a href="testimonial.html">Testimonial</a>
-                        </li>
-                        <li>
-                          <a href="pricing.html">Pricing Plan</a>
-                        </li>
-                        <li>
-                          <a href="privacy-policy.html">Privacy Policy</a>
+                          <NavLink to="#">404 Page</NavLink>
                         </li>
 
                         <li>
-                          <a href="tooltip.html">Tool Tip</a>
+                          <NavLink to="#">Video Style</NavLink>
                         </li>
                         <li>
-                          <a href="section-title.html">Section Title</a>
+                          <NavLink to="#">Our Portfolio</NavLink>
                         </li>
                         <li>
-                          <a href="team-style.html">Team Style</a>
+                          <NavLink to="#">Testimonial</NavLink>
                         </li>
                         <li>
-                          <a href="typography.html">Typography</a>
+                          <NavLink to="#">Pricing Plan</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="#">Privacy Policy</NavLink>
+                        </li>
+
+                        <li>
+                          <NavLink to="#">Tool Tip</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="#">Section Title</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="#">Team Style</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="#">Typography</NavLink>
                         </li>
                       </ul>
                     </div>
                     <div className="col-lg-3">
                       <ul className="mega-menu-item">
                         <li>
-                          <a href="form-style.html">Form Style</a>
+                          <NavLink to="#">Form Style</NavLink>
                         </li>
                         <li>
-                          <a href="pagination.html">Pagination</a>
+                          <NavLink to="#">Pagination</NavLink>
                         </li>
                         <li>
-                          <a href="avatars.html">Avatars</a>
+                          <NavLink to="#">Avatars</NavLink>
                         </li>
                         <li>
-                          <a href="animated-heading.html">Heading Split</a>
+                          <NavLink to="#">Heading Split</NavLink>
                         </li>
                         <li>
-                          <a href="lightbox.html">Light Box</a>
+                          <NavLink to="#">Light Box</NavLink>
                         </li>
 
                         <li>
-                          <a href="call-to-action.html">Call To Action</a>
+                          <NavLink to="#">Call To Action</NavLink>
                         </li>
                         <li>
-                          <a href="banner-slider.html">Banner Slider</a>
+                          <NavLink to="#">Banner Slider</NavLink>
                         </li>
                         <li>
-                          <a href="about-style.html">About Style</a>
+                          <NavLink to="#">About Style</NavLink>
                         </li>
                         <li>
-                          <a href="timeline.html">Timeline</a>
+                          <NavLink to="#">Timeline</NavLink>
                         </li>
                         <li>
-                          <a href="tab.html">Tab Style</a>
+                          <NavLink to="#">Tab Style</NavLink>
                         </li>
                       </ul>
                     </div>

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="tmp-footer footer-style-default variation-two position-relative dark-footer">
@@ -8,18 +10,18 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6 col-sm-6 col-12">
               <div className="tmp-footer-widget">
                 <div className="logo">
-                  <a href="/">
+                  <NavLink to="/">
                     <img
                       className="logo-light"
-                      src="/assets/main/images/logo/clear3.png"
+                      src="./assets/main/images/logo/clear3.png"
                       alt="Corporate Logo"
                     />
                     <img
                       className="logo-dark"
-                      src="/assets/main/images/logo/clear3.png"
+                      src="./assets/main/images/logo/clear3.png"
                       alt="Corporate Logo"
                     />
-                  </a>
+                  </NavLink>
                 </div>
                 <p className="subtitle mt--30 text-white">
                   Get started today with a trusted background verification
@@ -33,16 +35,16 @@ const Footer = () => {
                 <div className="inner">
                   <ul className="footer-link link-hover">
                     <li>
-                      <a href="/login">Login</a>
+                      <NavLink to="/login">Login</NavLink>
                     </li>
                     <li>
-                      <a href="/about">About</a>
+                      <NavLink to="/about">About</NavLink>
                     </li>
                     <li>
-                      <a href="/request">Request</a>
+                      <NavLink to="/request">Request</NavLink>
                     </li>
                     <li>
-                      <a href="#">Pricing</a>
+                      <NavLink to="#">Pricing</NavLink>
                     </li>
                   </ul>
                 </div>
@@ -54,16 +56,16 @@ const Footer = () => {
                 <div className="inner">
                   <ul className="footer-link link-hover">
                     <li>
-                      <a href="#">How It Works</a>
+                      <NavLink to="#">How It Works</NavLink>
                     </li>
                     <li>
-                      <a href="/services#basic-check">Basic DBS Check</a>
+                      <NavLink to="/services#basic-check">Basic DBS Check</NavLink>
                     </li>
                     <li>
-                      <a href="/services#standard-check">Standard DBS Check</a>
+                      <NavLink to="/services#standard-check">Standard DBS Check</NavLink>
                     </li>
                     <li>
-                      <a href="/services#enhanced-check">Enhanced DBS Check</a>
+                      <NavLink to="/services#enhanced-check">Enhanced DBS Check</NavLink>
                     </li>
                   </ul>
                 </div>

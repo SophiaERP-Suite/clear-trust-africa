@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const PrivacyPolicy = () => {
   return (
     <div>
@@ -10,7 +12,7 @@ const PrivacyPolicy = () => {
                 <div className="breadcrumb-page-title">
                   <ul className="page-list">
                     <li className="tmp-breadcrumb-item">
-                      <a href="/">Home</a>
+                      <NavLink to="/home">Home</NavLink>
                     </li>
                     <li className="tmp-breadcrumb-item active">
                       &nbsp; Privacy Policy

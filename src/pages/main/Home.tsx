@@ -1,4 +1,5 @@
 import { MdOutlineRadioButtonChecked } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -74,7 +75,7 @@ const Home = () => {
                 <div className="col-lg-10 col-xl-10">
                   <div className="inner text-left">
                     <h6 className="tag-title">
-                      Secure Your Organization with Confidenc
+                      Secure Your Organization with Confidence
                     </h6>
                     <h1 className="title display-one">
                       Ensure a Safe <br />
@@ -215,7 +216,7 @@ const Home = () => {
                 <div className="icon">
                   {/* <i className="feather-activity"></i> */}
                   <img
-                    src="/assets/main/images/services/icons/01.png"
+                    src="./assets/main/images/services/icons/01.png"
                     alt="service"
                   />
                 </div>
@@ -246,7 +247,7 @@ const Home = () => {
                 </div>
                 <div className="shape-service-1">
                   <img
-                    src="/assets/main/images/services/shape/01.png"
+                    src="./assets/main/images/services/shape/01.png"
                     alt="service"
                   />
                 </div>
@@ -258,7 +259,7 @@ const Home = () => {
                 <div className="icon">
                   {/* <i className="feather-cast"></i> */}
                   <img
-                    src="/assets/main/images/services/icons/02.png"
+                    src="./assets/main/images/services/icons/02.png"
                     alt="service"
                   />
                 </div>
@@ -289,7 +290,7 @@ const Home = () => {
                 </div>
                 <div className="shape-service-1">
                   <img
-                    src="/assets/main/images/services/shape/01.png"
+                    src="./assets/main/images/services/shape/01.png"
                     alt="service"
                   />
                 </div>
@@ -301,7 +302,7 @@ const Home = () => {
                 <div className="icon">
                   {/* <i className="feather-map"></i> */}
                   <img
-                    src="/assets/main/images/services/icons/03.png"
+                    src="./assets/main/images/services/icons/03.png"
                     alt="service"
                   />
                 </div>
@@ -332,7 +333,7 @@ const Home = () => {
                 </div>
                 <div className="shape-service-1">
                   <img
-                    src="/assets/main/images/services/shape/01.png"
+                    src="./assets/main/images/services/shape/01.png"
                     alt="service"
                   />
                 </div>
@@ -349,7 +350,7 @@ const Home = () => {
               <div className="thumbnail-about-8">
                 <div className="large-image  invers-anime">
                   <img
-                    src="/assets/main/images/bg/ct_aboutus_section.jpg"
+                    src="./assets/main/images/bg/ct_aboutus_section.jpg"
                     alt=""
                     loading="lazy"
                   />
@@ -607,9 +608,9 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                     mind.
                   </p>
                 </div>
-                <a href="/about" className="tmp-btn btn-primary">
+                <NavLink to="/about" className="tmp-btn btn-primary">
                   More About Us
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -879,7 +880,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                   <div className="col-lg-6">
                     <a href="#" className="thumbnail-service-list invers-anime">
                       <img
-                        src="/assets/main/images/bg/ct_health.jpg"
+                        src="./assets/main/images/bg/ct_health.jpg"
                         alt="Business consulting"
                       />
                     </a>
@@ -889,7 +890,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                       <div className="head">
                         <div className="icon">
                           <img
-                            src="/assets/main/images/services/list/icon/01.svg"
+                            src="./assets/main/images/services/list/icon/01.svg"
                             alt="Business"
                           />
                         </div>
@@ -917,7 +918,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                       <div className="head">
                         <div className="icon">
                           <img
-                            src="/assets/main/images/services/list/icon/02.svg"
+                            src="./assets/main/images/services/list/icon/02.svg"
                             alt="Business"
                           />
                         </div>
@@ -934,7 +935,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                   <div className="col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
                     <a href="#" className="thumbnail-service-list invers-anime">
                       <img
-                        src="/assets/main/images/bg/ct_educator.jpg"
+                        src="./assets/main/images/bg/ct_educator.jpg"
                         alt="Business consulting"
                       />
                     </a>
@@ -951,7 +952,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                   <div className="col-lg-6">
                     <a href="#" className="thumbnail-service-list invers-anime">
                       <img
-                        src="/assets/main/images/bg/ct_corporate.jpg"
+                        src="./assets/main/images/bg/ct_corporate.jpg"
                         alt="Business consulting"
                       />
                     </a>
@@ -961,7 +962,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                       <div className="head">
                         <div className="icon">
                           <img
-                            src="/assets/main/images/services/list/icon/03.svg"
+                            src="./assets/main/images/services/list/icon/03.svg"
                             alt="Business"
                           />
                         </div>
@@ -990,7 +991,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                       <div className="head">
                         <div className="icon">
                           <img
-                            src="/assets/main/images/services/list/icon/04.svg"
+                            src="./assets/main/images/services/list/icon/04.svg"
                             alt="Business"
                           />
                         </div>
@@ -1008,7 +1009,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                   <div className="col-lg-6 order-1 order-lg-2 order-md-1 order-sm-1">
                     <a href="#" className="thumbnail-service-list invers-anime">
                       <img
-                        src="/assets/main/images/bg/ct_recruit.jpg"
+                        src="./assets/main/images/bg/ct_recruit.jpg"
                         alt="Business consulting"
                       />
                     </a>
@@ -1390,7 +1391,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <img
                   className="w-100 radius"
                   loading="lazy"
-                  src="/assets/main/images/bg/ct_faq.jpg"
+                  src="./assets/main/images/bg/ct_faq.jpg"
                   alt="About Images"
                 />
               </div>
@@ -1569,13 +1570,13 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                               data-tooltip="Mark JOrdan"
                             >
                               <img
-                                src="/assets/main/images/testimonial/tooltip-01.png"
+                                src="./assets/main/images/testimonial/tooltip-01.png"
                                 alt="education"
                               />
                             </a>
                             <a href="#" className="avatar" data-tooltip="Mark">
                               <img
-                                src="/assets/main/images/testimonial/tooltip-02.png"
+                                src="./assets/main/images/testimonial/tooltip-02.png"
                                 alt="education"
                               />
                             </a>
@@ -1585,7 +1586,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                               data-tooltip="Jordan"
                             >
                               <img
-                                src="/assets/main/images/testimonial/tooltip-03.png"
+                                src="./assets/main/images/testimonial/tooltip-03.png"
                                 alt="education"
                               />
                             </a>
@@ -1604,19 +1605,19 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                       </div>
                     </div>
                     {/* <div className="shape-image wow move-out">
-                                        <img src="/assets/main/images/shape/01.png" alt="call-to-action">
+                                        <img src="./assets/main/images/shape/01.png" alt="call-to-action">
                                     </div> */}
                     <div className="person-stand images-left-right-float">
                       {/* <img
                         loading="lazy"
-                        src="/assets/main/images/call-to-action/01.png"
+                        src="./assets/main/images/call-to-action/01.png"
                         alt="call-to-action"
                       /> */}
                     </div>
                     <div className="bg-shape-area-cta-main tmponhover">
                       <img
                         loading="lazy"
-                        src="/assets/main/images/bg/ct_request.jpg"
+                        src="./assets/main/images/bg/ct_request.jpg"
                         alt=""
                       />
                     </div>

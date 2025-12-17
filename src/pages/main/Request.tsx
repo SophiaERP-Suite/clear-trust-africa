@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { RequestContext } from "../../utils/main/Context";
+import { NavLink } from "react-router-dom";
 
 const Request = () => {
   const { requestType } = useContext(RequestContext);
@@ -75,7 +76,7 @@ const Request = () => {
 
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>Request</li>
           </ul>

@@ -28,28 +28,28 @@ const MainLayout = () => {
     feather.replace();
 
     const scriptUrls = [
-      "/assets/main/js/vendor/jquery.min.js",
-      "/assets/main/js/vendor/bootstrap.min.js",
-      "/assets/main/js/vendor/waypoint.min.js",
-      "/assets/main/js/vendor/wow.min.js",
-      "/assets/main/js/vendor/feather.min.js",
-      "/assets/main/js/vendor/sal.min.js",
-      "/assets/main/js/plugins/gsap.js",
-      "/assets/main/js/plugins/scrolltigger.js",
-      "/assets/main/js/plugins/splittext.js",
-      "/assets/main/js/vendor/masonry.js",
-      "/assets/main/js/vendor/imageloaded.js",
-      "/assets/main/js/vendor/magnify.min.js",
-      "/assets/main/js/vendor/lightbox.js",
-      "/assets/main/js/vendor/slick.min.js",
-      "/assets/main/js/vendor/easypie.js",
-      "/assets/main/js/vendor/text-type.js",
-      "/assets/main/js/vendor/jquery-one-page-nav.js",
-      "/assets/main/js/plugins/smoothscroll.js",
-      "/assets/main/js/plugins/odometer.js",
-      "/assets/main/js/plugins/jaralax.js",
-      "/assets/main/js/plugins/scroll-elements.js",
-      "/assets/main/js/main.js",
+      "./assets/main/js/vendor/jquery.min.js",
+      "./assets/main/js/vendor/bootstrap.min.js",
+      "./assets/main/js/vendor/waypoint.min.js",
+      "./assets/main/js/vendor/wow.min.js",
+      "./assets/main/js/vendor/feather.min.js",
+      "./assets/main/js/vendor/sal.min.js",
+      "./assets/main/js/plugins/gsap.js",
+      "./assets/main/js/plugins/scrolltigger.js",
+      "./assets/main/js/plugins/splittext.js",
+      "./assets/main/js/vendor/masonry.js",
+      "./assets/main/js/vendor/imageloaded.js",
+      "./assets/main/js/vendor/magnify.min.js",
+      "./assets/main/js/vendor/lightbox.js",
+      "./assets/main/js/vendor/slick.min.js",
+      "./assets/main/js/vendor/easypie.js",
+      "./assets/main/js/vendor/text-type.js",
+      "./assets/main/js/vendor/jquery-one-page-nav.js",
+      "./assets/main/js/plugins/smoothscroll.js",
+      "./assets/main/js/plugins/odometer.js",
+      "./assets/main/js/plugins/jaralax.js",
+      "./assets/main/js/plugins/scroll-elements.js",
+      "./assets/main/js/main.js",
     ];
 
     // Load all scripts sequentially
@@ -119,7 +119,7 @@ const MainLayout = () => {
           {/* sidebar desktop */}
           <div className="inverweb-side-bar-close">
             <div className="shape-right-top">
-              <img src="/assets/main/images/banner/shape-it-1.svg" alt="" />
+              <img src="./assets/main/images/banner/shape-it-1.svg" alt="" />
             </div>
             <button className="close-icon-menu tmponhover">
               <i className="feather-x"></i>
@@ -128,12 +128,12 @@ const MainLayout = () => {
               <a href="#">
                 <img
                   className="logo-light"
-                  src="/assets/main/images/logo/clear3.png"
+                  src="./assets/main/images/logo/clear3.png"
                   alt="Corporate Logo"
                 />
                 <img
                   className="logo-dark"
-                  src="/assets/main/images/logo/clear.png"
+                  src="./assets/main/images/logo/clear.png"
                   alt="Corporate Logo"
                 />
               </a>
@@ -164,13 +164,13 @@ const MainLayout = () => {
             <div className="row g-3 mt--15" id="animated-lightbox2">
               <a
                 className="col-lg-4 col-md-6 col-sm-6 col-12"
-                href="/assets/main/images/portfolio/portfolio-01.jpg"
+                href="./assets/main/images/portfolio/portfolio-01.jpg"
               >
                 <div className="tmp-gallery icon-center">
                   <div className="thumbnail">
                     <img
                       className="radius-small"
-                      src="/assets/main/images/portfolio/portfolio-01.jpg"
+                      src="./assets/main/images/portfolio/portfolio-01.jpg"
                       alt="Corporate Image"
                     />
                   </div>
@@ -186,13 +186,13 @@ const MainLayout = () => {
 
               <a
                 className="col-lg-4 col-md-6 col-sm-6 col-12"
-                href="/assets/main/images/portfolio/portfolio-02.jpg"
+                href="./assets/main/images/portfolio/portfolio-02.jpg"
               >
                 <div className="tmp-gallery icon-center">
                   <div className="thumbnail">
                     <img
                       className="radius-small"
-                      src="/assets/main/images/portfolio/portfolio-02.jpg"
+                      src="./assets/main/images/portfolio/portfolio-02.jpg"
                       alt="Corporate Image"
                     />
                   </div>
@@ -208,13 +208,13 @@ const MainLayout = () => {
 
               <a
                 className="col-lg-4 col-md-6 col-sm-6 col-12"
-                href="/assets/main/images/portfolio/portfolio-03.jpg"
+                href="./assets/main/images/portfolio/portfolio-03.jpg"
               >
                 <div className="tmp-gallery icon-center">
                   <div className="thumbnail">
                     <img
                       className="radius-small"
-                      src="/assets/main/images/portfolio/portfolio-03.jpg"
+                      src="./assets/main/images/portfolio/portfolio-03.jpg"
                       alt="Corporate Image"
                     />
                   </div>
@@ -230,13 +230,13 @@ const MainLayout = () => {
 
               <a
                 className="col-lg-4 col-md-6 col-sm-6 col-12"
-                href="/assets/main/images/portfolio/portfolio-04.jpg"
+                href="./assets/main/images/portfolio/portfolio-04.jpg"
               >
                 <div className="tmp-gallery icon-center">
                   <div className="thumbnail">
                     <img
                       className="radius-small"
-                      src="/assets/main/images/portfolio/portfolio-04.jpg"
+                      src="./assets/main/images/portfolio/portfolio-04.jpg"
                       alt="Corporate Image"
                     />
                   </div>
@@ -252,13 +252,13 @@ const MainLayout = () => {
 
               <a
                 className="col-lg-4 col-md-6 col-sm-6 col-12"
-                href="/assets/main/images/portfolio/portfolio-05.jpg"
+                href="./assets/main/images/portfolio/portfolio-05.jpg"
               >
                 <div className="tmp-gallery icon-center">
                   <div className="thumbnail">
                     <img
                       className="radius-small"
-                      src="/assets/main/images/portfolio/portfolio-05.jpg"
+                      src="./assets/main/images/portfolio/portfolio-05.jpg"
                       alt="Corporate Image"
                     />
                   </div>
@@ -274,13 +274,13 @@ const MainLayout = () => {
 
               <a
                 className="col-lg-4 col-md-6 col-sm-6 col-12"
-                href="/assets/main/images/portfolio/portfolio-06.jpg"
+                href="./assets/main/images/portfolio/portfolio-06.jpg"
               >
                 <div className="tmp-gallery icon-center">
                   <div className="thumbnail">
                     <img
                       className="radius-small"
-                      src="/assets/main/images/portfolio/portfolio-06.jpg"
+                      src="./assets/main/images/portfolio/portfolio-06.jpg"
                       alt="Corporate Image"
                     />
                   </div>

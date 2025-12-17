@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const Contact = () => {
   return (
     <div className="main-content">
@@ -8,7 +10,7 @@ const Contact = () => {
 
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>Contact</li>
           </ul>
@@ -110,7 +112,7 @@ const Contact = () => {
               </div>
               <div className="image-area">
                 <img
-                  src="/assets/main/images/bg/ct_alpha_1.jpg"
+                  src="./assets/main/images/bg/ct_alpha_1.jpg"
                   width="645"
                   alt=""
                 />
@@ -137,7 +139,7 @@ const Contact = () => {
               </div>
               <div className="image-area">
                 <img
-                  src="/assets/main/images/bg/ct_alpha_2.jpg"
+                  src="./assets/main/images/bg/ct_alpha_2.jpg"
                   width="645"
                   alt=""
                 />
@@ -161,7 +163,7 @@ const Contact = () => {
             <div className="col-lg-5">
               <div className="aapoiment-left-area-thumbnail">
                 <img
-                  src="/assets/main/images/bg/ct_coontact.jpg"
+                  src="./assets/main/images/bg/ct_coontact.jpg"
                   alt="appoinment"
                 />
               </div>

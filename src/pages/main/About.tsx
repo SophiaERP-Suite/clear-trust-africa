@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom"
+
 const About = () => {
   return (
     <>
@@ -11,7 +13,7 @@ const About = () => {
 
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>About</li>
           </ul>
@@ -56,7 +58,7 @@ const About = () => {
               <div className="thumbnail-about-8">
                 <div className="large-image  invers-anime">
                   <img
-                    src="/assets/main/images/bg/ct_aboout.jpg"
+                    src="./assets/main/images/bg/ct_aboout.jpg"
                     alt=""
                     loading="lazy"
                   />
@@ -337,7 +339,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
             <div className="col-lg-5 order-1 order-lg-2">
               <img
                 className="radius-small"
-                src="/assets/main/images/bg/ct_principles.jpg"
+                src="./assets/main/images/bg/ct_principles.jpg"
                 alt="Corporate Template"
               />
             </div>
@@ -618,7 +620,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                           <div className="thumbnail">
                             <img
                               className="w-100"
-                              src="/assets/main/images/bg/ct_work_process.jpg"
+                              src="./assets/main/images/bg/ct_work_process.jpg"
                             />
                           </div>
                         </div>
@@ -637,7 +639,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
           <div className="section-inner">
             <div className="left-image">
               <img
-                src="/assets/main/images/contact/get-bg.webp"
+                src="./assets/main/images/contact/get-bg.webp"
                 width="420"
                 alt=""
               />
@@ -689,7 +691,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-01.png"
+                      src="./assets/main/images/brand/brand-01.png"
                       alt="Brand Image"
                     />
                   </a>
@@ -697,7 +699,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-02.png"
+                      src="./assets/main/images/brand/brand-02.png"
                       alt="Brand Image"
                     />
                   </a>
@@ -705,7 +707,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-03.png"
+                      src="./assets/main/images/brand/brand-03.png"
                       alt="Brand Image"
                     />
                   </a>
@@ -713,7 +715,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-04.png"
+                      src="./assets/main/images/brand/brand-04.png"
                       alt="Brand Image"
                     />
                   </a>
@@ -721,7 +723,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-05.png"
+                      src="./assets/main/images/brand/brand-05.png"
                       alt="Brand Image"
                     />
                   </a>
@@ -729,7 +731,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-06.png"
+                      src="./assets/main/images/brand/brand-06.png"
                       alt="Brand Image"
                     />
                   </a>
@@ -737,7 +739,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-07.png"
+                      src="./assets/main/images/brand/brand-07.png"
                       alt="Brand Image"
                     />
                   </a>
@@ -745,7 +747,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 <li>
                   <a href="#">
                     <img
-                      src="/assets/main/images/brand/brand-08.png"
+                      src="./assets/main/images/brand/brand-08.png"
                       alt="Brand Image"
                     />
                   </a>

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { RequestContext } from "../../utils/main/Context";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Services = () => {
   const { setRequestType } = useContext(RequestContext);
@@ -29,7 +29,7 @@ const Services = () => {
           <h2>Our Services</h2>
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>Services</li>
           </ul>
@@ -142,7 +142,7 @@ const Services = () => {
                         <div className="thumbnail invers-anime">
                           <img
                             className="radius-small"
-                            src="/assets/main/images/bg/ct_basic_check.jpg"
+                            src="./assets/main/images/bg/ct_basic_check.jpg"
                             alt="Corporate Image"
                           />
                         </div>
@@ -223,7 +223,7 @@ const Services = () => {
                         <div className="thumbnail invers-anime">
                           <img
                             className="radius-small"
-                            src="/assets/main/images/bg/ct_standard_check.jpg"
+                            src="./assets/main/images/bg/ct_standard_check.jpg"
                             alt="Corporate Image"
                           />
                         </div>
@@ -302,7 +302,7 @@ const Services = () => {
                         <div className="thumbnail invers-anime">
                           <img
                             className="radius-small"
-                            src="/assets/main/images/bg/ct_enhanced.jpg"
+                            src="./assets/main/images/bg/ct_enhanced.jpg"
                             alt="Corporate Image"
                           />
                         </div>
@@ -487,7 +487,7 @@ const Services = () => {
                 <div className="service service__style--1 bg-color-blackest radius text-center tmp-border">
                   <div className="icon">
                     <img
-                      src="/assets/main/images/services/icon-01.png"
+                      src="./assets/main/images/services/icon-01.png"
                       alt="corporate-business"
                     />
                     {/* <i className="feather-map"></i>*/}
@@ -508,7 +508,7 @@ const Services = () => {
                 <div className="service service__style--1 bg-color-blackest radius text-center tmp-border">
                   <div className="icon">
                     <img
-                      src="/assets/main/images/services/icon-02.png"
+                      src="./assets/main/images/services/icon-02.png"
                       alt="corporate-business"
                     />
                     {/* <i className="feather-loader"></i>*/}
@@ -529,7 +529,7 @@ const Services = () => {
                 <div className="service service__style--1 bg-color-blackest radius text-center tmp-border">
                   <div className="icon">
                     <img
-                      src="/assets/main/images/services/icon-03.png"
+                      src="./assets/main/images/services/icon-03.png"
                       alt="corporate-business"
                     />
                     {/* <i className="feather-speaker"></i>*/}
@@ -598,13 +598,13 @@ const Services = () => {
                               data-tooltip="Mark JOrdan"
                             >
                               <img
-                                src="/assets/main/images/testimonial/tooltip-01.png"
+                                src="./assets/main/images/testimonial/tooltip-01.png"
                                 alt="education"
                               />
                             </a>
                             <a href="#" className="avatar" data-tooltip="Mark">
                               <img
-                                src="/assets/main/images/testimonial/tooltip-02.png"
+                                src="./assets/main/images/testimonial/tooltip-02.png"
                                 alt="education"
                               />
                             </a>
@@ -614,7 +614,7 @@ const Services = () => {
                               data-tooltip="Jordan"
                             >
                               <img
-                                src="/assets/main/images/testimonial/tooltip-03.png"
+                                src="./assets/main/images/testimonial/tooltip-03.png"
                                 alt="education"
                               />
                             </a>
@@ -633,19 +633,19 @@ const Services = () => {
                       </div>
                     </div>
                     {/* <div className="shape-image wow move-out">
-                                        <img src="/assets/main/images/shape/01.png" alt="call-to-action">
+                                        <img src="./assets/main/images/shape/01.png" alt="call-to-action">
                                     </div> */}
                     <div className="person-stand images-left-right-float">
                       {/* <img
                         loading="lazy"
-                        src="/assets/main/images/call-to-action/01.png"
+                        src="./assets/main/images/call-to-action/01.png"
                         alt="call-to-action"
                       /> */}
                     </div>
                     <div className="bg-shape-area-cta-main tmponhover">
                       <img
                         loading="lazy"
-                        src="/assets/main/images/bg/ct_request.jpg"
+                        src="./assets/main/images/bg/ct_request.jpg"
                         alt=""
                       />
                     </div>

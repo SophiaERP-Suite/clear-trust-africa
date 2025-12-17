@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { RegisterContext } from "../../utils/main/Context";
 import toast from "react-hot-toast";
+import { NavLink } from "react-router-dom";
 
 const Signup = () => {
   const { registerType, setRegisterType } = useContext(RegisterContext);
@@ -57,7 +58,7 @@ const Signup = () => {
 
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <NavLink to="/home">Home</NavLink>
             </li>
             <li>Register</li>
           </ul>
