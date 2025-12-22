@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useContext, useEffect, useRef } from "react";
 import { RegisterContext } from "../../utils/main/Context";
 import { NavLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { addEmployer } from "../../utils/functions/EmployerRequests";
-import { handleData } from "../../utils/functions/Extra";
+import { handleDataReg } from "../../utils/functions/Extra";
 import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 interface EmployerFormValues {
   Name: string;
@@ -26,6 +28,7 @@ const Signup = () => {
 
   const formRef = useRef<HTMLDivElement>(null!);
   const redirectTimeout = useRef<number>(null!);
+  const navigate = useNavigate();
 
   const handleRegisterChange = (value: string) => () => {
     setRegisterType(value);
@@ -78,7 +81,7 @@ const Signup = () => {
         text.style.display = 'none';
       }
       const res = await addEmployer(data);
-      handleData(res, loader, text, { toast }, reset)
+      handleDataReg(res, loader, text, { toast }, reset, navigate);
     }
   }
 
@@ -200,6 +203,9 @@ const Signup = () => {
                   noValidate
                 >
                   <div className="section-title">
+                    <h2 className="tmp-title-style-3">Step 1 of 2 - Employer Registration</h2>
+                  </div>
+                  <div className="section-title">
                     <h4 className="tmp-title-style-3">Organization Details</h4>
                   </div>
 
@@ -281,7 +287,7 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          placeholder="Phone Number"
+                          placeholder="Last Name"
                           {
                             ...register('LastName', {
                               required: 'Input Last Name'

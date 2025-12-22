@@ -10,3 +10,18 @@ export const addEmployer = async (data: unknown) => {
   })
   return response
 }
+
+export const getEmployerOrganization = async (orgId: number) => {
+  const response = await fetch(`${BaseURL}/employers/${orgId}/organization`, {
+    method: 'GET'
+  })
+  return response
+}
+
+export const uploadEmployerDocs = async (data: FormData, orgId: number) => {
+  const response = await fetch(`${BaseURL}/employers/${orgId}/upload`, {
+    method: 'POST',
+    body: data,
+  })
+  return response
+}

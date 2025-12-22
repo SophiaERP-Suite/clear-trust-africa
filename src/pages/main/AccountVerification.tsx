@@ -1,13 +1,28 @@
-import { useContext, useEffect, useRef } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useContext, useEffect, useRef, useState } from "react";
 import { RegisterContext } from "../../utils/main/Context";
-import toast from "react-hot-toast";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
+import { getEmployerOrganization, uploadEmployerDocs } from "../../utils/functions/EmployerRequests";
+import { toast } from 'react-toastify';
+import { useForm } from "react-hook-form";
+import { handleData } from "../../utils/functions/Extra";
+
+interface EmployerVerificationFormValues {
+  CAC: string,
+  Utility: string,
+  ValidId: string,
+  TIN: string
+}
 
 const AccountVerification = () => {
   const { registerType, setRegisterType } = useContext(RegisterContext);
+  const { register, reset, handleSubmit, formState } = useForm<EmployerVerificationFormValues>();
+  const { errors } = formState;
+  const [ orgName, setOrgName ] = useState<string>("N/A");
+  const { regType, orgId } = useParams();
+  const navigate = useNavigate();
 
   const formRef = useRef<HTMLDivElement>(null!);
-  const redirectTimeout = useRef<number>(null!);
 
   const handleRegisterChange = (value: string) => () => {
     setRegisterType(value);
@@ -15,9 +30,55 @@ const AccountVerification = () => {
 
   useEffect(() => {
     return () => {
-      setRegisterType("agent");
+      setRegisterType(regType ?? "agent");
     };
   }, []);
+
+  const submitFiles = async (data: any) => {
+    if (!errors.CAC &&
+      !errors.Utility &&
+      !errors.ValidId && !errors.TIN
+    ) {
+      const loader = document.getElementById('query-loader');
+      const text = document.getElementById('query-text');
+      if (loader) {
+        loader.style.display = 'flex';
+      }
+      if (text) {
+        text.style.display = 'none';
+      }
+      const formData = new FormData();
+      formData.append('CAC', data.CAC[0]);
+      formData.append('Utility', data.Utility[0]);
+      formData.append('ValidId', data.ValidId[0]);
+      formData.append('TIN', data.TIN);
+      const res = await uploadEmployerDocs(formData, Number(orgId));
+      handleData(res, loader, text, { toast }, reset, navigate);
+    }
+  }
+  
+
+  useEffect(() => {
+    return () => {
+      getEmployerOrganization(Number(orgId))
+        .then((res: any) => {
+          console.log(res);
+          if (res.status === 200) {
+            res.json()
+              .then((data: any) => {
+                console.log(data)
+                setOrgName(`- For: ${data.data.name}`)
+            })
+          } else {
+            toast.warning("Organization Not Found")
+          }   
+        })
+        .catch((err: any) => {
+          console.log(err);
+          toast.warning("Organization Not Found")
+        })
+    }
+  }, [])
 
   useEffect(() => {
     if (formRef.current) {
@@ -29,21 +90,7 @@ const AccountVerification = () => {
       );
     }
   }, [registerType]);
-
-  const handleSubmit = () => {
-    toast.dismissAll();
-    clearTimeout(redirectTimeout.current);
-
-    toast.success(
-      "Your verification details have been submitted successfully. We’ll review your information and notify you once your account has been verified."
-    );
-
-    redirectTimeout.current = setTimeout(
-      () => (window.location.href = "/admin"),
-      4500
-    );
-  };
-
+  
   return (
     <>
       {/* Banner Area */}
@@ -155,8 +202,12 @@ const AccountVerification = () => {
                 <form
                   className="contact-form-1 appoinment-form-wrapper tmponhover tmp-dynamic-form"
                   id="contact-form"
-                  onSubmit={(e) => e.preventDefault()}
+                  onSubmit={handleSubmit(submitFiles)}
+                  noValidate
                 >
+                  <div className="section-title">
+                    <h2 className="tmp-title-style-3">Step 2 of 2 - Employer Registration {orgName} </h2>
+                  </div>
                   <div className="section-title">
                     <h4 className="tmp-title-style-3">Verification Details</h4>
                   </div>
@@ -168,10 +219,14 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="file"
-                          name="contact-name"
-                          id="contact-name"
+                          {
+                            ...register('CAC', {
+                              required: 'Required'
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.CAC?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -179,10 +234,14 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
+                          {
+                            ...register('TIN', {
+                              required: 'Required'
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.TIN?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -190,7 +249,14 @@ const AccountVerification = () => {
                         Proof of Address (Utility Bill or Lease Document) *
                       </label>
                       <div className="form-group tmponhover">
-                        <input type="file" required />
+                        <input type="file"
+                          {
+                            ...register('Utility', {
+                              required: 'Required'
+                            })
+                          }
+                          required />
+                        <p className='error-msg'>{ errors.Utility?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -198,10 +264,14 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="file"
-                          name="contact-name"
-                          id="contact-name"
+                          {
+                            ...register('ValidId', {
+                              required: 'Required'
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.ValidId?.message }</p>
                       </div>
                     </div>
                   </div>
@@ -213,9 +283,13 @@ const AccountVerification = () => {
                       id="submit"
                       className="btn-default btn-large tmp-btn"
                       style={{ width: "100%;" }}
-                      onClick={handleSubmit}
                     >
-                      <span>Submit Now</span>
+                      <div className="dots hidden" id="query-loader">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                      </div>
+                      <span id="query-text">Submit Data</span>
                     </button>
                   </div>
                 </form>
@@ -250,8 +324,6 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="file"
-                          name="contact-name"
-                          id="contact-name"
                           required
                         />
                       </div>
@@ -261,8 +333,6 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           required
                         />
                       </div>
@@ -282,8 +352,6 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="file"
-                          name="contact-name"
-                          id="contact-name"
                           required
                         />
                       </div>
@@ -293,8 +361,6 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="file"
-                          name="contact-name"
-                          id="contact-name"
                           required
                         />
                       </div>
@@ -308,9 +374,13 @@ const AccountVerification = () => {
                       id="submit"
                       className="btn-default btn-large tmp-btn"
                       style={{ width: "100%;" }}
-                      onClick={handleSubmit}
                     >
-                      <span>Submit Now</span>
+                      <div className="dots hidden" id="query-loader">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                      </div>
+                      <span id="query-text">Submit Data</span>
                     </button>
                   </div>
                 </form>
@@ -344,8 +414,6 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="file"
-                          name="contact-name"
-                          id="contact-name"
                           required
                         />
                       </div>
@@ -355,8 +423,6 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="file"
-                          name="contact-name"
-                          id="contact-name"
                           required
                         />
                       </div>
@@ -370,9 +436,13 @@ const AccountVerification = () => {
                       id="submit"
                       className="btn-default btn-large tmp-btn"
                       style={{ width: "100%;" }}
-                      onClick={handleSubmit}
                     >
-                      <span>Submit Now</span>
+                      <div className="dots hidden" id="query-loader">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                      </div>
+                      <span id="query-text">Submit Data</span>
                     </button>
                   </div>
                 </form>
