@@ -25,3 +25,14 @@ export const uploadEmployerDocs = async (data: FormData, orgId: number) => {
   })
   return response
 }
+
+export const loginUser = async (data: unknown) => {
+  const response = await fetch(`${BaseURL}/auth`, {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data),
+  })
+  return response
+}

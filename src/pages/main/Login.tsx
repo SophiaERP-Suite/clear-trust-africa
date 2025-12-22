@@ -1,18 +1,35 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { handleDataAuth } from "../../utils/functions/Extra";
+import { loginUser } from "../../utils/functions/EmployerRequests";
+
+interface LoginFormValues {
+  Email: string;
+  Password: string;
+}
 const Login = () => {
-  //employer - instituion name
+  const { register, reset, handleSubmit, formState } = useForm<LoginFormValues>();
+  const { errors } = formState;
+  const navigate = useNavigate();
+
+  const submitData = async (data: any) => {
+    if (!errors.Email && !errors.Password) {
+      const loader = document.getElementById('query-loader');
+      const text = document.getElementById('query-text');
+      if (loader) {
+        loader.style.display = 'flex';
+      }
+      if (text) {
+        text.style.display = 'none';
+      }
+      const res = await loginUser(data);
+      handleDataAuth(res, loader, text, { toast }, reset, navigate);
+    }
+  }
   return (
     <>
-      {/* Banner Area */}
-      {/* <div className="pages-banner">
-        <h2>Sign in to your account</h2>
-
-        <ul>
-          <li>
-            <a href="/home">Home</a>
-          </li>
-          <li>Login</li>
-        </ul>
-      </div> */}
 
       <div className="tmp-contact-area tmp-section-gap register-tag">
         <div className="container">
@@ -53,58 +70,67 @@ const Login = () => {
               <form
                 className="contact-form-1 appoinment-form-wrapper tmponhover tmp-dynamic-form"
                 id="contact-form"
-                method="POST"
-                action="https://html.inversweb.com/corpox/mail.php"
+                onSubmit={handleSubmit(submitData)}
+                noValidate
               >
                 <div className="row g-5 register-form-row">
-                  <div className="col-lg-12 col-md-12">
-                    <label>Organization Code *</label>
-                    <div className="form-group tmponhover">
-                      <input
-                        type="text"
-                        name="contact-name"
-                        id="contact-name"
-                        placeholder="Your Organization Code"
-                        required
-                      />
-                    </div>
-                  </div>
                   <div className="col-lg-12 col-md-12">
                     <label>Email Address *</label>
                     <div className="form-group tmponhover">
                       <input
                         type="text"
-                        name="contact-name"
-                        id="contact-name"
-                        placeholder="Your Email Address"
+                        placeholder="Email Address"
+                        {
+                          ...register('Email', {
+                            required: 'Input Email Address',
+                            pattern: {
+                              value: /^[^@\s]+@[^@\s]+\.[^@\s]+$/,
+                              message: "Invalid Email"
+                            } 
+                          })
+                        }
                         required
                       />
+                      <p className='error-msg'>{ errors.Email?.message }</p>
                     </div>
                   </div>
                   <div className="col-lg-12 col-md-12 mt-5">
                     <label>Password *</label>
                     <div className="form-group tmponhover">
                       <input
-                        type="text"
-                        name="contact-name"
-                        id="contact-name"
-                        placeholder="Your Password"
-                        required
-                      />
+                          type="password"
+                          placeholder="Password"
+                          {
+                            ...register('Password', {
+                              required: 'Input Password',
+                              minLength: {
+                                value: 8,
+                                message: 'Password must be at least 8 characters',
+                              },
+                            })
+                          }
+                          required
+                        />
+                        <p className='error-msg'>{ errors.Password?.message }</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="form-group submit-btn mt-5 mb-5">
                   <button
-                    name="submit"
-                    type="submit"
-                    id="submit"
-                    className="btn-default btn-large tmp-btn"
-                    style={{ width: "100%;" }}
-                  >
-                    <span>Submit Now</span>
-                  </button>
+                      name="submit"
+                      type="submit"
+                      id="submit"
+                      className="btn-default btn-large tmp-btn"
+                      style={{ width: "100%;" }}
+                    >
+                      <div className="dots hidden" id="query-loader">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                      </div>
+                      <span id="query-text">Submit Data</span>
+                    </button>
                 </div>
               </form>
             </div>
