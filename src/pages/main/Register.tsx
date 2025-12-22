@@ -1,10 +1,28 @@
 import { useContext, useEffect, useRef } from "react";
 import { RegisterContext } from "../../utils/main/Context";
-import toast from "react-hot-toast";
 import { NavLink } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { addEmployer } from "../../utils/functions/EmployerRequests";
+import { handleData } from "../../utils/functions/Extra";
+import { toast } from 'react-toastify';
+
+interface EmployerFormValues {
+  Name: string;
+  RegistrationNumber: string;
+  Address: string;
+  FirstName: string;
+  LastName: string;
+  Email: string;
+  Phone: string;
+  Password: string;
+  ConfirmPassword: string;
+}
 
 const Signup = () => {
   const { registerType, setRegisterType } = useContext(RegisterContext);
+  const { register, reset, handleSubmit, watch, formState } = useForm<EmployerFormValues>();
+  const password = watch('Password');
+  const { errors } = formState;
 
   const formRef = useRef<HTMLDivElement>(null!);
   const redirectTimeout = useRef<number>(null!);
@@ -31,7 +49,6 @@ const Signup = () => {
   }, [registerType]);
 
   const submitForm = () => {
-    toast.dismissAll();
     clearTimeout(redirectTimeout.current);
 
     toast.success(
@@ -43,6 +60,27 @@ const Signup = () => {
       4500
     );
   };
+
+  const submitEmployer = async (data: any) => {
+    if (!errors.Name &&
+      !errors.RegistrationNumber &&
+      !errors.Address && !errors.FirstName &&
+      !errors.LastName && !errors.Email &&
+      !errors.Phone && !errors.Password &&
+      !errors.ConfirmPassword
+    ) {
+      const loader = document.getElementById('query-loader');
+      const text = document.getElementById('query-text');
+      if (loader) {
+        loader.style.display = 'flex';
+      }
+      if (text) {
+        text.style.display = 'none';
+      }
+      const res = await addEmployer(data);
+      handleData(res, loader, text, { toast }, reset)
+    }
+  }
 
   return (
     <>
@@ -158,10 +196,11 @@ const Signup = () => {
                 <form
                   className="contact-form-1 appoinment-form-wrapper tmponhover tmp-dynamic-form"
                   id="contact-form"
-                  onSubmit={(e) => e.preventDefault()}
+                  onSubmit={handleSubmit(submitEmployer)}
+                  noValidate
                 >
                   <div className="section-title">
-                    <h4 className="tmp-title-style-3">Employer Profile</h4>
+                    <h4 className="tmp-title-style-3">Organization Details</h4>
                   </div>
 
                   <div className="row g-5 register-form-row">
@@ -170,57 +209,87 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Name"
+                          {
+                            ...register('Name', {
+                              required: 'Input Organization Name'
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.Name?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
-                      <label>Type *</label>
-                      <select
-                        name="organization-type"
-                        id="organization-type"
-                        required
-                      >
-                        <option value="">Select Organization Type</option>
-
-                        <optgroup label="Basic Education">
-                          <option value="nursery-primary-school">
-                            Nursery / Primary School
-                          </option>
-                          <option value="secondary-school">
-                            Secondary School
-                          </option>
-                        </optgroup>
-
-                        <optgroup label="Tertiary Education">
-                          <option value="college">College</option>
-                          <option value="polytechnic">Polytechnic</option>
-                          <option value="university">University</option>
-                        </optgroup>
-
-                        <optgroup label="Training & Development">
-                          <option value="training-institute">
-                            Training Institute
-                          </option>
-                          <option value="vocational-centre">
-                            Vocational / Skill Centre
-                          </option>
-                        </optgroup>
-                      </select>
-                    </div>
-                    <div className="col-lg-6 col-md-12">
-                      <label> Institution Name *</label>
+                      <label>Registration Number</label>
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
-                          placeholder="Institution Name"
+                          placeholder="Registration Number"
+                          {
+                            ...register('RegistrationNumber', {
+                              required: 'Input CAC Registration Number'
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.RegistrationNumber?.message }</p>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <label>Official Address *</label>
+                      <div className="form-group tmponhover">
+                        <textarea
+                          placeholder="Official Address"
+                          {
+                            ...register('Address', {
+                              required: 'Input Official Address'
+                            })
+                          }
+                          required
+                        ></textarea>
+                        <p className='error-msg'>{ errors.Address?.message }</p>
+                      </div>
+                    </div>      
+                  </div>
+
+                  <div className="section-title">
+                    <h4 className="tmp-title-style-3 mt-3">
+                      Super User Credentials
+                    </h4>
+                  </div>
+          
+                  <div className="row g-5 register-form-row">
+                    <div className="col-lg-6 col-md-12">
+                      <label>First Name *</label>
+                      <div className="form-group tmponhover">
+                        <input
+                          type="text"
+                          placeholder="First Name"
+                          {
+                            ...register('FirstName', {
+                              required: 'Input First Name'
+                            })
+                          }
+                          required
+                        />
+                        <p className='error-msg'>{ errors.FirstName?.message }</p>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-12">
+                      <label>Last Name *</label>
+                      <div className="form-group tmponhover">
+                        <input
+                          type="text"
+                          placeholder="Phone Number"
+                          {
+                            ...register('LastName', {
+                              required: 'Input Last Name'
+                            })
+                          }
+                          required
+                        />
+                        <p className='error-msg'>{ errors.LastName?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -228,11 +297,19 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Email Address"
+                          {
+                            ...register('Email', {
+                              required: 'Input Email Address',
+                              pattern: {
+                                value: /^[^@\s]+@[^@\s]+\.[^@\s]+$/,
+                                message: "Invalid Email"
+                              } 
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.Email?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -240,44 +317,35 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Phone Number"
+                          {
+                            ...register('Phone', {
+                              required: 'Input Phone Number'
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.Phone?.message }</p>
                       </div>
                     </div>
-                    <div className="col-lg-6 col-md-12">
-                      <label>Official Address *</label>
-                      <div className="form-group tmponhover">
-                        <input
-                          type="text"
-                          name="contact-name"
-                          id="contact-name"
-                          placeholder="Official Address"
-                          required
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="section-title">
-                    <h4 className="tmp-title-style-3 mt-3">
-                      Access Credentials
-                    </h4>
-                  </div>
-
-                  <div className="row g-5 register-form-row">
                     <div className="col-lg-6 col-md-12">
                       <label>Password*</label>
                       <div className="form-group tmponhover">
                         <input
                           type="password"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Password"
+                          {
+                            ...register('Password', {
+                              required: 'Input Password',
+                              minLength: {
+                                value: 8,
+                                message: 'Password must be at least 8 characters',
+                              },
+                            })
+                          }
                           required
                         />
+                        <p className='error-msg'>{ errors.Password?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -285,11 +353,15 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="password"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Confirm Password"
+                          {...register('ConfirmPassword', {
+                            required: 'Confirm your password',
+                            validate: (value) =>
+                              value === password || 'Passwords do not match',
+                          })}
                           required
                         />
+                        <p className='error-msg'>{ errors.ConfirmPassword?.message }</p>
                       </div>
                     </div>
                   </div>
@@ -301,9 +373,13 @@ const Signup = () => {
                       id="submit"
                       className="btn-default btn-large tmp-btn"
                       style={{ width: "100%;" }}
-                      onClick={submitForm}
                     >
-                      <span>Submit Now</span>
+                      <div className="dots hidden" id="query-loader">
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                        <div className="dot"></div>
+                      </div>
+                      <span id="query-text">Submit Data</span>
                     </button>
                   </div>
                 </form>
@@ -336,8 +412,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Name"
                           required
                         />
@@ -371,8 +445,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Email Address"
                           required
                         />
@@ -383,8 +455,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Phone Number"
                           required
                         />
@@ -395,8 +465,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Official Address"
                           required
                         />
@@ -415,8 +483,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="password"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Password"
                           required
                         />
@@ -427,8 +493,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="password"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Confirm Password"
                           required
                         />
@@ -478,8 +542,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="First Name"
                           required
                         />
@@ -490,8 +552,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Last Name"
                           required
                         />
@@ -519,8 +579,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Email Address"
                           required
                         />
@@ -531,8 +589,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Phone Number"
                           required
                         />
@@ -543,8 +599,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Address"
                           required
                         />
@@ -555,8 +609,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="text"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Institution Name"
                           required
                         />
@@ -575,8 +627,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="password"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Password"
                           required
                         />
@@ -587,8 +637,6 @@ const Signup = () => {
                       <div className="form-group tmponhover">
                         <input
                           type="password"
-                          name="contact-name"
-                          id="contact-name"
                           placeholder="Confirm Password"
                           required
                         />
