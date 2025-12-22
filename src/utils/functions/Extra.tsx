@@ -1,7 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { toast } from 'react-toastify';
+
 
 interface Props {
   toast: typeof toast;
+}
+
+interface Response {
+  message: string;
+  errors: [];
 }
 
 export const handleData = async (res: any, loader: HTMLElement | null, text: HTMLElement | null, { toast }: Props, reset: any, msg="Data added successfully") => {
@@ -20,10 +27,17 @@ export const handleData = async (res: any, loader: HTMLElement | null, text: HTM
     } else {
       console.log(res.status)
       const resText = await res.text();
-      toast.warning("Data saving not successful");
       try {
-        let responseData = JSON.parse(resText);
+        const responseData: Response = JSON.parse(resText);
         console.log('Object Data', responseData)
+        if (responseData.errors) {
+          responseData.errors.forEach((data: any) => {
+            toast.warning(data);
+          })
+        } else {
+          toast.warning(responseData.message);
+          console.log(responseData.message);
+        }
       } catch (error: any) {
         console.error("Parsing error:", error.message);
         console.log(resText);
