@@ -131,7 +131,7 @@ const Login = () => {
                         <div className="dot"></div>
                         <div className="dot"></div>
                       </div>
-                      <span id="query-text">Submit Data</span>
+                      <span id="query-text">Login</span>
                     </button>
                 </div>
               </form>
