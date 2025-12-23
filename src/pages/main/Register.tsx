@@ -218,7 +218,7 @@ const Signup = () => {
                           placeholder="Name"
                           {
                             ...register('Name', {
-                              required: 'Input Organization Name'
+                              required: 'Provide Organization Name'
                             })
                           }
                           required
@@ -234,7 +234,7 @@ const Signup = () => {
                           placeholder="Registration Number"
                           {
                             ...register('RegistrationNumber', {
-                              required: 'Input CAC Registration Number'
+                              required: 'Provide CAC Registration Number'
                             })
                           }
                           required
@@ -249,7 +249,7 @@ const Signup = () => {
                           placeholder="Official Address"
                           {
                             ...register('Address', {
-                              required: 'Input Official Address'
+                              required: 'Provide Official Address'
                             })
                           }
                           required
@@ -274,7 +274,7 @@ const Signup = () => {
                           placeholder="First Name"
                           {
                             ...register('FirstName', {
-                              required: 'Input First Name'
+                              required: 'Provide First Name'
                             })
                           }
                           required
@@ -290,7 +290,7 @@ const Signup = () => {
                           placeholder="Last Name"
                           {
                             ...register('LastName', {
-                              required: 'Input Last Name'
+                              required: 'Provide Last Name'
                             })
                           }
                           required
@@ -306,7 +306,7 @@ const Signup = () => {
                           placeholder="Email Address"
                           {
                             ...register('Email', {
-                              required: 'Input Email Address',
+                              required: 'Provide Email Address',
                               pattern: {
                                 value: /^[^@\s]+@[^@\s]+\.[^@\s]+$/,
                                 message: "Invalid Email"
@@ -326,7 +326,7 @@ const Signup = () => {
                           placeholder="Phone Number"
                           {
                             ...register('Phone', {
-                              required: 'Input Phone Number'
+                              required: 'Provide Phone Number'
                             })
                           }
                           required
@@ -342,7 +342,7 @@ const Signup = () => {
                           placeholder="Password"
                           {
                             ...register('Password', {
-                              required: 'Input Password',
+                              required: 'Provide Password',
                               minLength: {
                                 value: 8,
                                 message: 'Password must be at least 8 characters',

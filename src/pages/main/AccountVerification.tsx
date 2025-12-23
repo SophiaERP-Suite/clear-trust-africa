@@ -11,6 +11,7 @@ interface EmployerVerificationFormValues {
   CAC: string,
   Utility: string,
   ValidId: string,
+  NIN: string,
   TIN: string
 }
 
@@ -36,7 +37,7 @@ const AccountVerification = () => {
 
   const submitFiles = async (data: any) => {
     if (!errors.CAC &&
-      !errors.Utility &&
+      !errors.Utility && !errors.NIN &&
       !errors.ValidId && !errors.TIN
     ) {
       const loader = document.getElementById('query-loader');
@@ -51,6 +52,7 @@ const AccountVerification = () => {
       formData.append('CAC', data.CAC[0]);
       formData.append('Utility', data.Utility[0]);
       formData.append('ValidId', data.ValidId[0]);
+      formData.append('NIN', data.NIN[0]);
       formData.append('TIN', data.TIN);
       const res = await uploadEmployerDocs(formData, Number(orgId));
       handleData(res, loader, text, { toast }, reset, navigate);
@@ -70,12 +72,14 @@ const AccountVerification = () => {
                 setOrgName(`- For: ${data.data.name}`)
             })
           } else {
-            toast.warning("Organization Not Found")
+            toast.warning("Organization Not Found");
+            navigate("/register");
           }   
         })
         .catch((err: any) => {
           console.log(err);
-          toast.warning("Organization Not Found")
+          toast.warning("Organization Not Found");
+          navigate("/register");
         })
     }
   }, [])
@@ -230,18 +234,18 @@ const AccountVerification = () => {
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
-                      <label>Tax Identification Number *</label>
+                      <label>National Identification *</label>
                       <div className="form-group tmponhover">
                         <input
-                          type="text"
+                          type="file"
                           {
-                            ...register('TIN', {
+                            ...register('NIN', {
                               required: 'Required'
                             })
                           }
                           required
                         />
-                        <p className='error-msg'>{ errors.TIN?.message }</p>
+                        <p className='error-msg'>{ errors.NIN?.message }</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -272,6 +276,21 @@ const AccountVerification = () => {
                           required
                         />
                         <p className='error-msg'>{ errors.ValidId?.message }</p>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <label>Tax Identification Number *</label>
+                      <div className="form-group tmponhover">
+                        <input
+                          type="text"
+                          {
+                            ...register('TIN', {
+                              required: 'Required'
+                            })
+                          }
+                          required
+                        />
+                        <p className='error-msg'>{ errors.TIN?.message }</p>
                       </div>
                     </div>
                   </div>

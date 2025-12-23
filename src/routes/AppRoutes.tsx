@@ -26,7 +26,6 @@ function AppRoutes() {
           path="registration-confirmation"
           element={<RegisterConfirmation />}
         />
-        <Route path="account-verification" element={<AccountVerification />} />
         <Route path="account-verification/:regType/:orgId" element={<AccountVerification />} />
         <Route path="services" element={<Services />} />
         <Route path="request" element={<Request />} />

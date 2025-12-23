@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { handleDataAuth } from "../../utils/functions/Extra";
 import { loginUser } from "../../utils/functions/EmployerRequests";
+import { useAuth } from "../../utils/main/useAuth";
 
 interface LoginFormValues {
   Email: string;
@@ -13,6 +14,7 @@ const Login = () => {
   const { register, reset, handleSubmit, formState } = useForm<LoginFormValues>();
   const { errors } = formState;
   const navigate = useNavigate();
+  const auth = useAuth();
 
   const submitData = async (data: any) => {
     if (!errors.Email && !errors.Password) {
@@ -25,7 +27,7 @@ const Login = () => {
         text.style.display = 'none';
       }
       const res = await loginUser(data);
-      handleDataAuth(res, loader, text, { toast }, reset, navigate);
+      handleDataAuth(res, loader, text, { toast }, reset, navigate, auth);
     }
   }
   return (

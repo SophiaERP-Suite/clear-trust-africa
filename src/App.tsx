@@ -2,12 +2,15 @@ import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./routes/AppRoutes";
 import { ToastContainer } from 'react-toastify';
+import { AuthProvider } from "./utils/main/AuthProvider";
 
 function App() {
   return (
       <BrowserRouter basename="/xt">
         <ToastContainer />
-        <AppRoutes />
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
       </BrowserRouter>
   );
 }

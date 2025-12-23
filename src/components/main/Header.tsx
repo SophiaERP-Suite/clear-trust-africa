@@ -2,11 +2,13 @@ import { useContext } from "react";
 import { RegisterContext } from "../../utils/main/Context";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
+import { useAuth } from "../../utils/main/useAuth";
 
 const secondHeaderPaths = ["login", "privacy-policy", "terms-and-condition"];
 
 const Header = () => {
   const { setRegisterType } = useContext(RegisterContext);
+  const { user, logout } = useAuth();
 
   const pagePath = useLocation()
     .pathname.split("/")
@@ -114,10 +116,13 @@ const Header = () => {
                     <li className="with-megamenu">
                       <NavLink to="/request">Request </NavLink>
                     </li>
-
-                    <li>
-                      <NavLink to="/login">Login</NavLink>
-                    </li>
+                    {
+                      user
+                      ?  (<></>)
+                      : (<li>
+                          <NavLink to="/login">Login</NavLink>
+                        </li>)
+                    }
                   </ul>
                 </nav>
 
@@ -133,38 +138,83 @@ const Header = () => {
                       </span>
                     </span>
                   </div>
-                  <div className="get-started-box">
-                    <NavLink to="#" className="tmp-btn round  get-started-btn">
-                      Get Started
-                    </NavLink>
-
-                    <ul>
-                      <li>
-                        <Link
-                          to={"/register"}
-                          onClick={handleRegisterChange("agent")}
-                        >
-                          As Agent
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={"/register"}
-                          onClick={handleRegisterChange("employer")}
-                        >
-                          As Employer
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          to={"/register"}
-                          onClick={handleRegisterChange("institution")}
-                        >
-                          As Institution
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+                    {
+                      user ? 
+                        (
+                          <div className="get-started-box">
+                          <li>
+                            <a href="#" className="tmp-btn round  get-started-btn">
+                              Hello, {user.firstName}
+                            </a>
+                          </li>
+                          <ul>
+                            <li>
+                              {
+                                user.organizationType === "Employer" && (
+                                  <a href="https://cleartrustafrica.com/xt/cta_emp/" target="_blank">
+                                    My Portal
+                                  </a>
+                                )
+                              }
+                              {
+                                user.organizationType === "Root" && (
+                                  <a href="https://cleartrustafrica.com/xt/cta_adm/" target="_blank">
+                                    My Portal
+                                  </a>
+                                )
+                              }
+                              {
+                                user.organizationType === "Agent" && (
+                                  <a href="https://cleartrustafrica.com/xt/cta_agt/" target="_blank">
+                                    My Portal
+                                  </a>
+                                )
+                              }
+                            </li>
+                            <li>
+                              <a href="#" onClick={logout}>
+                                Logout
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      )
+                      : (
+                        <div className="get-started-box">
+                          <li>
+                            <NavLink to="#" className="tmp-btn round  get-started-btn">
+                              Get Started
+                            </NavLink>
+                          </li>
+                          <ul>
+                            <li>
+                              <Link
+                                to={"/register"}
+                                onClick={handleRegisterChange("agent")}
+                              >
+                                As Agent
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to={"/register"}
+                                onClick={handleRegisterChange("employer")}
+                              >
+                                As Employer
+                              </Link>
+                            </li>
+                            <li>
+                              <Link
+                                to={"/register"}
+                                onClick={handleRegisterChange("institution")}
+                              >
+                                As Institution
+                              </Link>
+                            </li>
+                          </ul>
+                        </div>
+                        )
+                    }
 
                   <div className="cart-container">
                     <span>
