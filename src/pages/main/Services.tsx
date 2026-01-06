@@ -85,7 +85,7 @@ const Services = () => {
                         individual’s criminal record, showing any unspent
                         convictions from the Police National Computer. It
                         supports roles that require integrity verification and
-                        helps organizations make informed decisions while
+                        helps organisations make informed decisions while
                         ensuring transparency and compliance.
                       </p>
 
@@ -112,7 +112,7 @@ const Services = () => {
                           </li>
 
                           <li>
-                            Supports compliance with legal and organizational
+                            Supports compliance with legal and organisational
                             standards.
                           </li>
 
@@ -178,7 +178,7 @@ const Services = () => {
                         individual’s criminal history, including spent and
                         unspent convictions, cautions, and reprimands. It is
                         ideal for positions of trust that require integrity and
-                        accountability. This check helps organizations ensure
+                        accountability. This check helps organisations ensure
                         safer and more compliant recruitment decisions.
                       </p>
 
@@ -393,7 +393,7 @@ const Services = () => {
                       data-sal-duration="700"
                       data-sal-delay="300"
                     >
-                      Securely submit the required personal or organizational
+                      Securely submit the required personal or organisational
                       information.
                     </p>
                   </div>
@@ -539,7 +539,7 @@ const Services = () => {
                       <a>Trusted Nationwide </a>
                     </h4>
                     <p className="description mb--0">
-                      Recognized and relied upon by organizations across the
+                      Recognized and relied upon by organisations across the
                       country.
                     </p>
                   </div>
@@ -568,7 +568,7 @@ const Services = () => {
                             background check?
                           </h2>
                           <h6 className="subtitle tmp-title-split">
-                            The trusted choice for individuals and organizations
+                            The trusted choice for individuals and organisations
                             worldwide.
                           </h6>
                           <div className="call-to-btn d-flex justify-content-center">
@@ -620,7 +620,7 @@ const Services = () => {
                             </a>
                             <div className="more-author-text">
                               <h5 className="total-join-students">
-                                Join Other Organizations
+                                Join Other Organisations
                               </h5>
                               <p className="subtitle">
                                 <a className="btn-read-more" href="/contact">

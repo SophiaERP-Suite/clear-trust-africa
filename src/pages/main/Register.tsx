@@ -206,7 +206,7 @@ const Signup = () => {
                     <h2 className="tmp-title-style-3">Step 1 of 2 - Employer Registration</h2>
                   </div>
                   <div className="section-title">
-                    <h4 className="tmp-title-style-3">Organization Details</h4>
+                    <h4 className="tmp-title-style-3">Organisation Details</h4>
                   </div>
 
                   <div className="row g-5 register-form-row">
@@ -218,7 +218,7 @@ const Signup = () => {
                           placeholder="Name"
                           {
                             ...register('Name', {
-                              required: 'Provide Organization Name'
+                              required: 'Provide Organisation Name'
                             })
                           }
                           required

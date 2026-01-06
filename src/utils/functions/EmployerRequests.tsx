@@ -11,8 +11,8 @@ export const addEmployer = async (data: unknown) => {
   return response
 }
 
-export const getEmployerOrganization = async (orgId: number) => {
-  const response = await fetch(`${BaseURL}/employers/${orgId}/organization`, {
+export const getEmployerOrganisation = async (orgId: number) => {
+  const response = await fetch(`${BaseURL}/employers/${orgId}/organisation`, {
     method: 'GET'
   })
   return response

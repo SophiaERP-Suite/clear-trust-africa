@@ -53,7 +53,7 @@ const Home = () => {
                 <div className="col-lg-10 col-xl-10">
                   <div className="inner text-left">
                     <h6 className="tag-title">
-                      Secure Your Organization with Confidence
+                      Secure Your Organisation with Confidence
                     </h6>
                     <h1 className="title display-one">
                       Ensure a Safe <br />
@@ -623,7 +623,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                   <div className="count-number">Complete Assurance</div>
                 </div>
                 <h6 className="counter-title">
-                  Keep your organization or personal records secure and fully
+                  Keep your organisation or personal records secure and fully
                   compliant.
                 </h6>
                 <div className="left-hover-counter"></div>
@@ -859,7 +859,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                         <h6 className="title">Education & Childcare</h6>
                       </div>
                       <p className="disc">
-                        Schools, nurseries, and youth organizations must
+                        Schools, nurseries, and youth organisations must
                         safeguard children by screening teachers, staff, and
                         volunteers for past offences or misconduct before
                         employment.
@@ -1474,7 +1474,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             background check?
                           </h2>
                           <h6 className="subtitle tmp-title-split">
-                            The trusted choice for individuals and organizations
+                            The trusted choice for individuals and organisations
                             worldwide.
                           </h6>
                           <div className="call-to-btn d-flex justify-content-center">
@@ -1526,7 +1526,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             </a>
                             <div className="more-author-text">
                               <h5 className="total-join-students">
-                                Join Other Organizations
+                                Join Other Organisations
                               </h5>
                               <p className="subtitle">
                                 <a className="btn-read-more" href="/contact">

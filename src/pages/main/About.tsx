@@ -9,7 +9,7 @@ const About = () => {
         style={{ background: "url(./assets/main/images/bg/ct_about_us.jpg)" }}
       >
         <div className="pages-banner-content">
-          <h2>About Our Organization</h2>
+          <h2>About Our Organisation</h2>
 
           <ul>
             <li>
@@ -657,7 +657,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 </a>
                 <p className="desc">
                   We provide reliable and secure background verification
-                  solutions designed to support organizations and individuals in
+                  solutions designed to support organisations and individuals in
                   maintaining trust and compliance.
                 </p>
               </div>

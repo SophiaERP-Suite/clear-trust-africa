@@ -234,7 +234,7 @@ const Request = () => {
 
                                     <li>
                                       Supports compliance with legal and
-                                      organizational standards.
+                                      organisational standards.
                                     </li>
 
                                     <li>

@@ -16,7 +16,7 @@ interface ErrorResponse {
 interface DataResponse {
   message: string;
   data: {
-    organizationId: number
+    organisationId: number
   }
 }
 
@@ -35,7 +35,7 @@ export const handleDataReg = async (res: any, loader: HTMLElement | null, text: 
       console.log(responseData);
       toast.success(responseData.message ?? msg);
       reset();
-      navigate(`/account-verification/employer/${responseData.data.organizationId}`);
+      navigate(`/account-verification/employer/${responseData.data.organisationId}`);
     } else {
       console.log(res.status)
       const resText = await res.text();
@@ -116,11 +116,11 @@ export const handleDataAuth = async (res: any, loader: HTMLElement | null, text:
       toast.success(responseData.message ?? msg);
       reset();
       // if (user) {
-      //   if (user.organizationType === "Employer") {
+      //   if (user.organisationType === "Employer") {
       //     window.location.replace("/cta_emp/")
-      //   } else if (user.organizationType === "Root") {
+      //   } else if (user.organisationType === "Root") {
       //     window.location.replace("/cta_adm/")
-      //   } else if (user.organizationType === "Agent") {
+      //   } else if (user.organisationType === "Agent") {
       //     window.location.replace("/cta_adm/")
       //   } else {
       //     navigate(`/home`);

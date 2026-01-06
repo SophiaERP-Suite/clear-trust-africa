@@ -150,21 +150,21 @@ const Header = () => {
                           <ul>
                             <li>
                               {
-                                user.organizationType === "Employer" && (
+                                user.organisationType === "Employer" && (
                                   <a href="https://cleartrustafrica.com/xt/cta_emp/" target="_blank">
                                     My Portal
                                   </a>
                                 )
                               }
                               {
-                                user.organizationType === "Root" && (
+                                user.organisationType === "Root" && (
                                   <a href="https://cleartrustafrica.com/xt/cta_adm/" target="_blank">
                                     My Portal
                                   </a>
                                 )
                               }
                               {
-                                user.organizationType === "Agent" && (
+                                user.organisationType === "Agent" && (
                                   <a href="https://cleartrustafrica.com/xt/cta_agt/" target="_blank">
                                     My Portal
                                   </a>

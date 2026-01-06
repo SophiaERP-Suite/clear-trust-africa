@@ -2,7 +2,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { RegisterContext } from "../../utils/main/Context";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
-import { getEmployerOrganization, uploadEmployerDocs } from "../../utils/functions/EmployerRequests";
+import { getEmployerOrganisation, uploadEmployerDocs } from "../../utils/functions/EmployerRequests";
 import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import { handleData } from "../../utils/functions/Extra";
@@ -62,7 +62,7 @@ const AccountVerification = () => {
 
   useEffect(() => {
     return () => {
-      getEmployerOrganization(Number(orgId))
+      getEmployerOrganisation(Number(orgId))
         .then((res: any) => {
           console.log(res);
           if (res.status === 200) {
@@ -72,13 +72,13 @@ const AccountVerification = () => {
                 setOrgName(`- For: ${data.data.name}`)
             })
           } else {
-            toast.warning("Organization Not Found");
+            toast.warning("Organisation Not Found");
             navigate("/register");
           }   
         })
         .catch((err: any) => {
           console.log(err);
-          toast.warning("Organization Not Found");
+          toast.warning("Organisation Not Found");
           navigate("/register");
         })
     }

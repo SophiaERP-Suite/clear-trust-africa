@@ -76,7 +76,7 @@ const Footer = () => {
                 <h4 className="title">Stay With Us.</h4>
                 <div className="inner">
                   <h6 className="subtitle">
-                    Trusted by clients and organizations worldwide for reliable
+                    Trusted by clients and organisations worldwide for reliable
                     screening solutions.
                   </h6>
                   <ul className="social-icon social-default justify-content-start">

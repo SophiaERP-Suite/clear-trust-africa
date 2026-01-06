@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <h4>7. Security</h4>
                 <p>
-                  We apply strict technical and organizational measures to
+                  We apply strict technical and organisational measures to
                   protect your data from unauthorized access or misuse.
                 </p>
                 <h4>8. Updates</h4>
