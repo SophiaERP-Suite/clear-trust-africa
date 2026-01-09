@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { NavigateFunction } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import type { AuthContextType } from '../main/auth.types';
+import type { AuthContextType, User } from '../main/auth.types';
 
 
 interface Props {
@@ -112,22 +112,22 @@ export const handleDataAuth = async (res: any, loader: HTMLElement | null, text:
       const responseData = await res.json();
       console.log(responseData);
       auth.login(responseData.data);
-      // const user: User | null = auth.user;
+      const user: User | null = auth.user;
       toast.success(responseData.message ?? msg);
       reset();
-      // if (user) {
-      //   if (user.organisationType === "Employer") {
-      //     window.location.replace("/cta_emp/")
-      //   } else if (user.organisationType === "Root") {
-      //     window.location.replace("/cta_adm/")
-      //   } else if (user.organisationType === "Agent") {
-      //     window.location.replace("/cta_adm/")
-      //   } else {
-      //     navigate(`/home`);
-      //   }
-      // } else {
-      //   navigate(`/home`);
-      // }
+      if (user) {
+        if (user.organisationType === "Employer") {
+          window.location.replace("/cta_emp/")
+        } else if (user.organisationType === "Owner") {
+          window.location.replace("/cta_adm/")
+        } else if (user.organisationType === "Agent") {
+          window.location.replace("/cta_agt/")
+        } else {
+          navigate(`/home`);
+        }
+      } else {
+        navigate(`/home`);
+      }
       navigate(`/home`);
     } else {
       console.log(res.status)
