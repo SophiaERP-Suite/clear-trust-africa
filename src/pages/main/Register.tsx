@@ -135,7 +135,7 @@ const Signup = () => {
             <div className="col-lg-12">
               <div className="tmp-contact-address mt_dec--30">
                 <div className="row g-5">
-                  <div className="col-lg-4 col-md-6 col-12">
+                  <div className="col-md-6 col-12">
                     <div
                       className={`tmp-address tmponhover register-form-type  ${
                         registerType === "agent" ? "active" : ""
@@ -150,7 +150,7 @@ const Signup = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-4 col-md-6 col-12">
+                  <div className="col-md-6 col-12">
                     <div
                       className={`tmp-address tmponhover register-form-type ${
                         registerType === "employer" ? "active" : ""
@@ -165,7 +165,7 @@ const Signup = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-4 col-md-6 col-12">
+                  <div className="d-none col-lg-4 col-md-6 col-12">
                     <div
                       className={`tmp-address tmponhover register-form-type ${
                         registerType === "institution" ? "active" : ""

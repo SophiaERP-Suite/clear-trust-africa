@@ -203,14 +203,6 @@ const Header = () => {
                                 As Employer
                               </Link>
                             </li>
-                            <li>
-                              <Link
-                                to={"/register"}
-                                onClick={handleRegisterChange("institution")}
-                              >
-                                As Institution
-                              </Link>
-                            </li>
                           </ul>
                         </div>
                         )
