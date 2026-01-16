@@ -11,6 +11,7 @@ import Services from "../pages/main/Services";
 import Request from "../pages/main/Request";
 import PrivacyPolicy from "../pages/main/PrivacyPolicy";
 import Terms from "../pages/main/Terms";
+import Verification from "../pages/main/Verification";
 
 function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ function AppRoutes() {
         <Route path="login" element={<Login />} />
         <Route path="contact" element={<Contact />} />
         <Route path="about" element={<About />} />
+        <Route path="verification" element={<Verification />} />
         <Route
           path="registration-confirmation"
           element={<RegisterConfirmation />}

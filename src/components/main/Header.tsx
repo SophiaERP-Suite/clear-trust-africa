@@ -8,7 +8,7 @@ const secondHeaderPaths = ["login", "privacy-policy", "terms-and-condition"];
 
 const Header = () => {
   const { setRegisterType } = useContext(RegisterContext);
-  const { user, logout } = useAuth();
+  const { authData, logout } = useAuth();
 
   const pagePath = useLocation()
     .pathname.split("/")
@@ -117,7 +117,7 @@ const Header = () => {
                       <NavLink to="/request">Request </NavLink>
                     </li>
                     {
-                      user
+                      authData
                       ?  (<></>)
                       : (<li>
                           <NavLink to="/login">Login</NavLink>
@@ -139,32 +139,32 @@ const Header = () => {
                     </span>
                   </div>
                     {
-                      user ? 
+                      authData ? 
                         (
                           <div className="get-started-box">
                           <li>
                             <a href="#" className="tmp-btn round  get-started-btn">
-                              Hello, {user.firstName}
+                              Hello, {authData.user.firstName}
                             </a>
                           </li>
                           <ul>
                             <li>
                               {
-                                user.organisationType === "Employer" && (
+                                authData.user.organisationType === "Employer" && (
                                   <a href="https://cleartrustafrica.com/xt/cta_emp/" target="_blank">
                                     My Portal
                                   </a>
                                 )
                               }
                               {
-                                user.organisationType === "Root" && (
+                                authData.user.organisationType === "Root" && (
                                   <a href="https://cleartrustafrica.com/xt/cta_adm/" target="_blank">
                                     My Portal
                                   </a>
                                 )
                               }
                               {
-                                user.organisationType === "Agent" && (
+                                authData.user.organisationType === "Agent" && (
                                   <a href="https://cleartrustafrica.com/xt/cta_agt/" target="_blank">
                                     My Portal
                                   </a>
