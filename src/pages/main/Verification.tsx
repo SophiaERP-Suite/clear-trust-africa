@@ -2,7 +2,7 @@
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { handleDataAuth, handleVerifyUser } from "../../utils/functions/Extra";
+import { handleVerifyUser } from "../../utils/functions/Extra";
 import { verifyCode } from "../../utils/functions/EmployerRequests";
 import { useAuth } from "../../utils/main/useAuth";
 import { useEffect } from "react";
@@ -24,11 +24,6 @@ const Verification = () => {
     if (!mfaSession || mfaSession.expiresAt < Date.now()) {
       navigate("/login");
     }
-    console.log(
-      "user info",
-      Number(mfaSession?.userId),
-      Number(mfaSession?.organisationId)
-    );
   }, [mfaSession]);
 
   const submitData = async (code: any) => {

@@ -26,7 +26,8 @@ export const handleDataReg = async (
   { toast }: Props,
   reset: any,
   navigate: NavigateFunction,
-  msg = "Data added successfully"
+  msg: string,
+  portal: string
 ) => {
   try {
     if (loader) {
@@ -41,7 +42,7 @@ export const handleDataReg = async (
       toast.success(responseData.message ?? msg);
       reset();
       navigate(
-        `/account-verification/employer/${responseData.data.organisationId}`
+        `/account-verification/${portal}/${responseData.data.organisationId}`
       );
     } else {
       console.log(res.status);
@@ -177,14 +178,15 @@ export const handleVerifyUser = async (
       console.log("notice me", responseData);
       auth.setAuthData(responseData);
       localStorage.setItem("accessToken", responseData.token);
+      const token = responseData.token;
       const user = responseData.user;
 
       toast.success(responseData.message ?? msg);
       reset();
 
-      switch (user.organisationType) {
+      switch (user.organisation.organisationType.name) {
         case "Employer":
-          window.location.replace("/cta_emp/");
+          window.location.replace(`http://localhost:5175/xt/cta_emp/auth-bridge?token=${token}`);
           break;
 
         case "Owner":
@@ -192,7 +194,7 @@ export const handleVerifyUser = async (
           break;
 
         case "Agent":
-          window.location.replace("/cta_agt/");
+          window.location.replace(`http://localhost:5175/xt/cta_emp/auth-bridge?token=${token}`);
           break;
 
         default:

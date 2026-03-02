@@ -2,7 +2,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { RegisterContext } from "../../utils/main/Context";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
-import { getEmployerOrganisation, uploadEmployerDocs } from "../../utils/functions/EmployerRequests";
+import { getEmployerOrganisation, uploadAgentDocs, uploadEmployerDocs } from "../../utils/functions/EmployerRequests";
 import { toast } from 'react-toastify';
 import { useForm } from "react-hook-form";
 import { handleData } from "../../utils/functions/Extra";
@@ -15,11 +15,20 @@ interface EmployerVerificationFormValues {
   TIN: string
 }
 
+interface AgentVerificationFormValues {
+  CAC: string,
+  Utility: string,
+  NIN: string,
+  TIN: string
+}
+
 const AccountVerification = () => {
   const { registerType, setRegisterType } = useContext(RegisterContext);
   const { register, reset, handleSubmit, formState } = useForm<EmployerVerificationFormValues>();
+  const { register: registerAgent, reset: resetAgent, handleSubmit: handleAgentSubmit, formState: agentFormState } = useForm<AgentVerificationFormValues>();
   const { errors } = formState;
-  const [ orgName, setOrgName ] = useState<string>("N/A");
+  const { errors: agentErrors } = agentFormState;
+  const [orgName, setOrgName] = useState<string>("N/A");
   const { regType, orgId } = useParams();
   const navigate = useNavigate();
 
@@ -34,6 +43,29 @@ const AccountVerification = () => {
       setRegisterType(regType ?? "agent");
     };
   }, []);
+
+  const submitAgentFiles = async (data: any) => {
+    if (!agentErrors.CAC &&
+      !agentErrors.Utility && !agentErrors.NIN &&
+      !agentErrors.TIN
+    ) {
+      const loader = document.getElementById('query-loader');
+      const text = document.getElementById('query-text');
+      if (loader) {
+        loader.style.display = 'flex';
+      }
+      if (text) {
+        text.style.display = 'none';
+      }
+      const formData = new FormData();
+      formData.append('CAC', data.CAC[0]);
+      formData.append('Utility', data.Utility[0]);
+      formData.append('NIN', data.NIN[0]);
+      formData.append('TIN', data.TIN);
+      const res = await uploadAgentDocs(formData, orgId ? Number(orgId) : 1);
+      handleData(res, loader, text, { toast }, resetAgent, navigate);
+    }
+  }
 
   const submitFiles = async (data: any) => {
     if (!errors.CAC &&
@@ -54,11 +86,10 @@ const AccountVerification = () => {
       formData.append('ValidId', data.ValidId[0]);
       formData.append('NIN', data.NIN[0]);
       formData.append('TIN', data.TIN);
-      const res = await uploadEmployerDocs(formData, Number(orgId));
+      const res = await uploadEmployerDocs(formData, orgId ? Number(orgId) : 1);
       handleData(res, loader, text, { toast }, reset, navigate);
     }
   }
-  
 
   useEffect(() => {
     return () => {
@@ -70,11 +101,11 @@ const AccountVerification = () => {
               .then((data: any) => {
                 console.log(data)
                 setOrgName(`- For: ${data.data.name}`)
-            })
+              })
           } else {
             toast.warning("Organisation Not Found");
             navigate("/register");
-          }   
+          }
         })
         .catch((err: any) => {
           console.log(err);
@@ -94,7 +125,7 @@ const AccountVerification = () => {
       );
     }
   }, [registerType]);
-  
+
   return (
     <>
       {/* Banner Area */}
@@ -144,9 +175,8 @@ const AccountVerification = () => {
                 <div className="row g-5">
                   <div className="col-lg-4 col-md-6 col-12">
                     <div
-                      className={`tmp-address tmponhover register-form-type  ${
-                        registerType === "agent" ? "active" : ""
-                      }`}
+                      className={`tmp-address tmponhover register-form-type  ${registerType === "agent" ? "active" : ""
+                        }`}
                       onClick={handleRegisterChange("agent")}
                     >
                       <div className="icon">
@@ -159,9 +189,8 @@ const AccountVerification = () => {
                   </div>
                   <div className="col-lg-4 col-md-6 col-12">
                     <div
-                      className={`tmp-address tmponhover register-form-type ${
-                        registerType === "employer" ? "active" : ""
-                      }`}
+                      className={`tmp-address tmponhover register-form-type ${registerType === "employer" ? "active" : ""
+                        }`}
                       onClick={handleRegisterChange("employer")}
                     >
                       <div className="icon">
@@ -174,9 +203,8 @@ const AccountVerification = () => {
                   </div>
                   <div className="col-lg-4 col-md-6 col-12">
                     <div
-                      className={`tmp-address tmponhover register-form-type ${
-                        registerType === "institution" ? "active" : ""
-                      }`}
+                      className={`tmp-address tmponhover register-form-type ${registerType === "institution" ? "active" : ""
+                        }`}
                       onClick={handleRegisterChange("institution")}
                     >
                       <div className="icon">
@@ -224,13 +252,13 @@ const AccountVerification = () => {
                         <input
                           type="file"
                           {
-                            ...register('CAC', {
-                              required: 'Required'
-                            })
+                          ...register('CAC', {
+                            required: 'Required'
+                          })
                           }
                           required
                         />
-                        <p className='error-msg'>{ errors.CAC?.message }</p>
+                        <p className='error-msg'>{errors.CAC?.message}</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -239,13 +267,13 @@ const AccountVerification = () => {
                         <input
                           type="file"
                           {
-                            ...register('NIN', {
-                              required: 'Required'
-                            })
+                          ...register('NIN', {
+                            required: 'Required'
+                          })
                           }
                           required
                         />
-                        <p className='error-msg'>{ errors.NIN?.message }</p>
+                        <p className='error-msg'>{errors.NIN?.message}</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -255,12 +283,12 @@ const AccountVerification = () => {
                       <div className="form-group tmponhover">
                         <input type="file"
                           {
-                            ...register('Utility', {
-                              required: 'Required'
-                            })
+                          ...register('Utility', {
+                            required: 'Required'
+                          })
                           }
                           required />
-                        <p className='error-msg'>{ errors.Utility?.message }</p>
+                        <p className='error-msg'>{errors.Utility?.message}</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
@@ -269,13 +297,13 @@ const AccountVerification = () => {
                         <input
                           type="file"
                           {
-                            ...register('ValidId', {
-                              required: 'Required'
-                            })
+                          ...register('ValidId', {
+                            required: 'Required'
+                          })
                           }
                           required
                         />
-                        <p className='error-msg'>{ errors.ValidId?.message }</p>
+                        <p className='error-msg'>{errors.ValidId?.message}</p>
                       </div>
                     </div>
                     <div className="col-12">
@@ -284,13 +312,13 @@ const AccountVerification = () => {
                         <input
                           type="text"
                           {
-                            ...register('TIN', {
-                              required: 'Required'
-                            })
+                          ...register('TIN', {
+                            required: 'Required'
+                          })
                           }
                           required
                         />
-                        <p className='error-msg'>{ errors.TIN?.message }</p>
+                        <p className='error-msg'>{errors.TIN?.message}</p>
                       </div>
                     </div>
                   </div>
@@ -429,21 +457,66 @@ const AccountVerification = () => {
                   </div>
                   <div className="row g-5 register-form-row">
                     <div className="col-lg-6 col-md-12">
-                      <label>National ID / Driver’s License *</label>
+                      <label>
+                        Employer License / CAC Registration Certificate *
+                      </label>
                       <div className="form-group tmponhover">
                         <input
                           type="file"
+                          {
+                          ...registerAgent('CAC', {
+                            required: 'Required'
+                          })
+                          }
                           required
                         />
+                        <p className='error-msg'>{agentErrors.CAC?.message}</p>
                       </div>
                     </div>
                     <div className="col-lg-6 col-md-12">
-                      <label>Proof of Address *</label>
+                      <label>National Identification *</label>
                       <div className="form-group tmponhover">
                         <input
                           type="file"
+                          {
+                          ...registerAgent('NIN', {
+                            required: 'Required'
+                          })
+                          }
                           required
                         />
+                        <p className='error-msg'>{errors.NIN?.message}</p>
+                      </div>
+                    </div>
+                    <div className="col-lg-6 col-md-12">
+                      <label>
+                        Proof of Address (Utility Bill or Lease Document) *
+                      </label>
+                      <div className="form-group tmponhover">
+                        <input type="file"
+                          {
+                          ...registerAgent('Utility', {
+                            required: 'Required'
+                          })
+                          }
+                          required />
+                        <p className='error-msg'>{agentErrors.Utility?.message}</p>
+                      </div>
+                    </div>
+
+                    <div className="col-lg-6 col-md-12">
+                      <label>Tax Identification Number *</label>
+                      <div className="form-group tmponhover">
+                        <input
+                          type="text"
+                          {
+                          ...registerAgent('TIN', {
+                            required: 'Required'
+                          })
+                          }
+                          required
+                        />
+                        <p className='error-msg'>{agentErrors.TIN?.message}</p>
                       </div>
                     </div>
                   </div>
@@ -455,6 +528,7 @@ const AccountVerification = () => {
                       id="submit"
                       className="btn-default btn-large tmp-btn"
                       style={{ width: "100%;" }}
+                      onClick={handleAgentSubmit(submitAgentFiles)}
                     >
                       <div className="dots hidden" id="query-loader">
                         <div className="dot"></div>

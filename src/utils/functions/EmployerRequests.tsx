@@ -1,7 +1,14 @@
 import type { VerificationFormValues } from "../../pages/main/Verification";
-import type { MfaSession } from "../main/auth.types";
 
 const BaseURL = "http://localhost:5181";
+
+export const addAgent = (data: any) => {
+  return fetch(`${BaseURL}/agent/register`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+}
 
 export const addEmployer = async (data: unknown) => {
   const response = await fetch(`${BaseURL}/employers/`, {
@@ -29,13 +36,21 @@ export const uploadEmployerDocs = async (data: FormData, orgId: number) => {
   return response;
 };
 
+export const uploadAgentDocs = async (data: FormData, orgId: number) => {
+  const response = await fetch(`${BaseURL}/agent/${orgId}/upload`, {
+    method: "POST",
+    body: data,
+  });
+  return response;
+};
+
 export const verifyCode = async (
   code: VerificationFormValues,
   userId: number,
   organisationId: number
 ) => {
   const verificationCode = code.VerificationCode;
-  
+
   const response = await fetch(
     `${BaseURL}/auth/mfa/verify/ ${userId}/${organisationId}/${verificationCode}`,
     {

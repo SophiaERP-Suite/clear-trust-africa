@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { handleDataAuth } from "../../utils/functions/Extra";
 import { loginUser } from "../../utils/functions/EmployerRequests";
 import { useAuth } from "../../utils/main/useAuth";
+import { useEffect } from "react";
 
 interface LoginFormValues {
   Email: string;
@@ -15,6 +16,15 @@ const Login = () => {
   const { errors } = formState;
   const navigate = useNavigate();
   const auth = useAuth();
+
+   const { mfaSession } = useAuth();
+  
+    useEffect(() => {
+      if (mfaSession) {
+        navigate("/verification");
+      }
+    
+    }, [mfaSession]);
 
   const submitData = async (data: any) => {
     if (!errors.Email && !errors.Password) {
