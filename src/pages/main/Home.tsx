@@ -21,7 +21,7 @@ const Home = () => {
                       We Build a Safer <br /> <span>Workplace</span> for You.
                     </h1>
                     <p className="mb--40 b1">
-                      We deliver advanced DBS solutions that improve efficiency
+                      We deliver advanced CTA solutions that improve efficiency
                       and strengthen trust.
                     </p>
                     <div className="read-more-btn">
@@ -156,7 +156,7 @@ const Home = () => {
                 </div>
                 <div className="content">
                   <h4 className="title w-600">
-                    <a href="/services#basic-check">Basic DBS Check</a>
+                    <a href="/services#basic-check">Basic CTA Check</a>
                   </h4>
                   <p className="description mb--0">
                     Checks for unspent convictions only. Ideal for low-risk
@@ -199,7 +199,7 @@ const Home = () => {
                 </div>
                 <div className="content">
                   <h4 className="title w-600">
-                    <a href="/services#standard-check">Standard DBS Check</a>
+                    <a href="/services#standard-check">Standard CTA Check</a>
                   </h4>
                   <p className="description mb--0">
                     Covers both spent and unspent convictions. Suitable for
@@ -242,7 +242,7 @@ const Home = () => {
                 </div>
                 <div className="content">
                   <h4 className="title w-600">
-                    <a href="/services#enhanced-check">Enhanced DBS Check</a>
+                    <a href="/services#enhanced-check">Diaspora CTA Check</a>
                   </h4>
                   <p className="description mb--0">
                     Includes full criminal records and barred lists. Perfect for
@@ -969,12 +969,11 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                   <div className="line-separator line-right"></div>
                 </div>
                 <h2 className="title  tmp-title-split">
-                  Our Yearly & Monthly Pricing
+                  CTA Check Pricing
                 </h2>
                 <p className="description b1 tmp-title-split-p">
-                  Easily schedule your appointment with just a few clicks. Our
-                  team is <br /> always ready to assist you at your preferred
-                  time.
+                  Sign up and choose the appropriate CTA check that aligns with the required level of
+                  clearance for your staff or workers.
                 </p>
               </div>
             </div>
@@ -986,7 +985,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                 id="myTab"
                 role="tablist"
               >
-                <li className="nav-item" role="presentation">
+                <li className="nav-item d-none" role="presentation">
                   <button
                     className="nav-link tmp-btn btn-border active"
                     id="home-tab"
@@ -997,10 +996,10 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                     aria-controls="home"
                     aria-selected="true"
                   >
-                    Monthly Plan
+                    Pricing
                   </button>
                 </li>
-                <li className="nav-item" role="presentation">
+                <li className="nav-item d-none" role="presentation">
                   <button
                     className="nav-link tmp-btn btn-border"
                     id="profile-tab"
@@ -1037,7 +1036,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <h4>Basic</h4>
                           </div>
                           <h1>
-                            &#8358;3000 <span>/ Month</span>
+                            &#8358;1000 <span>/ Check</span>
                           </h1>
                         </div>
                         <ul className="feature-lists">
@@ -1057,17 +1056,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <MdOutlineRadioButtonChecked />
                             Remote/online process
                           </li>
-                          <li>
-                            <MdOutlineRadioButtonChecked />
-                            Limited email support (1 month)
-                          </li>
                         </ul>
-                        <a
-                          href="#"
-                          className="tmp-btn btn-primary btn-border w-100"
-                        >
-                          Pick This Package
-                        </a>
                       </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">
@@ -1081,7 +1070,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <h4>Standard</h4>
                           </div>
                           <h1>
-                            &#8358;5000 <span>/ Month</span>
+                            &#8358;2000 <span>/ Check</span>
                           </h1>
                         </div>
                         <ul className="feature-lists">
@@ -1101,15 +1090,8 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <MdOutlineRadioButtonChecked />
                             Remote/online process
                           </li>
-                          <li>
-                            <MdOutlineRadioButtonChecked />
-                            Support via email & phone (3 months)
-                          </li>
                         </ul>
                         <div className="popular-tag">Popular</div>
-                        <a href="#" className="tmp-btn btn-primary w-100">
-                          Pick This Package
-                        </a>
                       </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">
@@ -1120,10 +1102,10 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                       >
                         <div className="pricing-table-header">
                           <div className="top d-flex justify-content-between align-items-start">
-                            <h4>Premium</h4>
+                            <h4>Diaspora</h4>
                           </div>
                           <h1>
-                            &#8358;8000 <span>/ Month</span>
+                            &#8358;3000 <span>/ Check</span>
                           </h1>
                         </div>
                         <ul className="feature-lists">
@@ -1143,17 +1125,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <MdOutlineRadioButtonChecked />
                             Remote/online process
                           </li>
-                          <li>
-                            <MdOutlineRadioButtonChecked />
-                            Dedicated support (6 months)
-                          </li>
                         </ul>
-                        <a
-                          href="#"
-                          className="tmp-btn btn-border btn-primary w-100"
-                        >
-                          Pick This Package
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -1196,17 +1168,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <MdOutlineRadioButtonChecked />
                             Remote/online process
                           </li>
-                          <li>
-                            <MdOutlineRadioButtonChecked />
-                            Limited email support (1 month)
-                          </li>
                         </ul>
-                        <a
-                          href="#"
-                          className="tmp-btn btn-border btn-primary w-100"
-                        >
-                          Pick This Package
-                        </a>
                       </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">
@@ -1240,15 +1202,8 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <MdOutlineRadioButtonChecked />
                             Remote/online process
                           </li>
-                          <li>
-                            <MdOutlineRadioButtonChecked />
-                            Support via email & phone (3 months)
-                          </li>
                         </ul>
                         <div className="popular-tag">Popular</div>
-                        <a href="#" className="tmp-btn btn-primary w-100">
-                          Pick This Package
-                        </a>
                       </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12">
@@ -1259,7 +1214,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                       >
                         <div className="pricing-table-header">
                           <div className="top d-flex justify-content-between align-items-start">
-                            <h4>Premium</h4>
+                            <h4>Diaspora</h4>
                           </div>
                           <h1>
                             &#8358;80000 <span>/ Year</span>
@@ -1282,17 +1237,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             <MdOutlineRadioButtonChecked />
                             Remote/online process
                           </li>
-                          <li>
-                            <MdOutlineRadioButtonChecked />
-                            Dedicated support (6 months)
-                          </li>
                         </ul>
-                        <a
-                          href="#"
-                          className="tmp-btn  btn-border btn-primary w-100"
-                        >
-                          Pick This Package
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -1484,7 +1429,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             >
                               <span className="icon-reverse-wrapper">
                                 <span className="btn-text">
-                                  Request a DBS Check
+                                  Request a CTA Check
                                 </span>
                                 <span className="btn-icon">
                                   <i className="feather-arrow-right"></i>

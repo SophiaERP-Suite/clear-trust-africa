@@ -59,13 +59,13 @@ const Footer = () => {
                       <NavLink to="#">How It Works</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/services#basic-check">Basic DBS Check</NavLink>
+                      <NavLink to="/services#basic-check">Basic CTA Check</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/services#standard-check">Standard DBS Check</NavLink>
+                      <NavLink to="/services#standard-check">Standard CTA Check</NavLink>
                     </li>
                     <li>
-                      <NavLink to="/services#enhanced-check">Enhanced DBS Check</NavLink>
+                      <NavLink to="/services#enhanced-check">Enhanced CTA Check</NavLink>
                     </li>
                   </ul>
                 </div>

@@ -107,9 +107,6 @@ const Header = () => {
                     <li>
                       <NavLink to="/home">Home</NavLink>
                     </li>
-                    <li>
-                      <NavLink to="#">How it works</NavLink>
-                    </li>
                     <li className="with-megamenu">
                       <NavLink to="/services">Services</NavLink>
                     </li>
