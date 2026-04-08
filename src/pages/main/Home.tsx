@@ -1423,9 +1423,9 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                             worldwide.
                           </h6>
                           <div className="call-to-btn d-flex justify-content-center">
-                            <a
+                            <NavLink
                               className="tmp-btn btn-extra-large hover-icon-reverse"
-                              href="/request"
+                              to="/request"
                             >
                               <span className="icon-reverse-wrapper">
                                 <span className="btn-text">
@@ -1438,7 +1438,7 @@ c-0.703,1.213-0.543,2.688-0.404,3.406C20.229,6.225,20.387,5.914,20.573,5.593z"
                                   <i className="feather-arrow-right"></i>
                                 </span>
                               </span>
-                            </a>
+                            </NavLink>
                           </div>
                         </div>
                         <div className="tmp-profile-box mt--50">

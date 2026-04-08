@@ -661,7 +661,7 @@ body::before {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/icons/noise.gif);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/icons/noise.gif);
   z-index: -1;
   background-color: rebeccapurple;
   opacity: 0.03;
@@ -1809,123 +1809,123 @@ iframe {
 }
 
 .bg_image--1 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-1.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-1.html);
 }
 
 .bg_image--2 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-2.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-2.jpg);
 }
 
 .bg_image--3 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-3.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-3.html);
 }
 
 .bg_image--4 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-4.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-4.jpg);
 }
 
 .bg_image--5 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-5.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-5.html);
 }
 
 .bg_image--6 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-6.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-6.html);
 }
 
 .bg_image--7 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-7.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-7.html);
 }
 
 .bg_image--8 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-8.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-8.html);
 }
 
 .bg_image--9 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-9.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-9.html);
 }
 
 .bg_image--10 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-10.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-10.jpg);
 }
 
 .bg_image--11 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-11.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-11.html);
 }
 
 .bg_image--12 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-12.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-12.jpg);
 }
 
 .bg_image--13 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-13.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-13.jpg);
 }
 
 .bg_image--14 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-14.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-14.jpg);
 }
 
 .bg_image--15 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-15.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-15.html);
 }
 
 .bg_image--16 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-16.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-16.html);
 }
 
 .bg_image--17 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-17.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-17.jpg);
 }
 
 .bg_image--18 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-18.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-18.html);
 }
 
 .bg_image--19 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-19.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-19.jpg);
 }
 
 .bg_image--20 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-20.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-20.html);
 }
 
 .bg_image--21 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-21.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-21.html);
 }
 
 .bg_image--22 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-22.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-22.jpg);
 }
 
 .bg_image--23 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-23.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-23.html);
 }
 
 .bg_image--24 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-24.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-24.jpg);
 }
 
 .bg_image--25 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-25.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-25.jpg);
 }
 
 .bg_image--26 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-26.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-26.jpg);
 }
 
 .bg_image--27 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-27.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-27.jpg);
 }
 
 .bg_image--28 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-28.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-28.html);
 }
 
 .bg_image--29 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-29.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-29.html);
 }
 
 .bg_image--30 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-30.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-30.html);
 }
 
 /* Height and width */
@@ -9189,7 +9189,7 @@ textarea:-ms-input-placeholder {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/patern.svg) !important;
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/patern.svg) !important;
   z-index: -1;
   opacity: 0.3;
 }
@@ -9203,7 +9203,7 @@ textarea:-ms-input-placeholder {
 }
 
 .real-estate-demo {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/dot.svg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/dot.svg);
 }
 
 /* Heading Font  */
@@ -13138,7 +13138,7 @@ Primary style
   .tmp-megamenu.width-small-mega
   .wrapper
   .mega-top-banner {
-  background-image: url(http://localhost:5175/xt/assets/main/images/banner/menu-service.webp),
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/banner/menu-service.webp),
     radial-gradient(100% 100% at 100% 0%, #484c7a 0%, var(--color-primary) 100%);
   background-size: contain;
   background-position: right 30%;
@@ -13701,7 +13701,7 @@ Primary style
 
 .header-top-news.bg-image1,
 .header-top-news-2.bg-image1 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/header-top/top-banner.png);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/header-top/top-banner.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -13809,7 +13809,7 @@ Primary style
 }
 
 .header-top-news-2 .bg-image1 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/header-top/top-banner.png);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/header-top/top-banner.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -16559,7 +16559,7 @@ img.mfp-img {
 }
 
 .bg_image--2-webp {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/02.webp);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/02.webp);
 }
 
 .service-feature-main-wrapper-splash {
@@ -16660,7 +16660,7 @@ img.mfp-img {
 }
 
 .contact-with-us-service::after {
-  background-image: url(http://localhost:5175/xt/assets/main/images/story/09.webp);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/story/09.webp);
   background-size: cover;
 }
 
@@ -20080,7 +20080,7 @@ main.business-coatch .thumbnail-banner-business-coatch img {
 }
 
 .tmp-slick-arrow button.slick-arrow.prev-arrow::before {
-  content: url(http://localhost:5175/xt/assets/main/images/slick-arrow-left-small.png);
+  content: url(http://192.168.1.178:5173/xt/assets/main/images/slick-arrow-left-small.png);
   vertical-align: middle;
 }
 
@@ -20104,7 +20104,7 @@ main.business-coatch .thumbnail-banner-business-coatch img {
 }
 
 .tmp-slick-arrow button.slick-arrow.next-arrow::before {
-  content: url(http://localhost:5175/xt/assets/main/images/slick-arrow-right-small.png);
+  content: url(http://192.168.1.178:5173/xt/assets/main/images/slick-arrow-right-small.png);
   vertical-align: middle;
 }
 
@@ -21060,11 +21060,11 @@ Timeline Area
 }
 
 .bg-image.bg-image2 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/call-to-action/bg-image-1.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/call-to-action/bg-image-1.html);
 }
 
 .bg-image.bg-image3 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/call-to-action/bg-image-2.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/call-to-action/bg-image-2.jpg);
 }
 
 .data-black-overlay {
@@ -21201,7 +21201,7 @@ Timeline Area
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/icons/noise.gif);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/icons/noise.gif);
   z-index: -1;
   background-color: rebeccapurple;
   opacity: 0.03;
@@ -21256,7 +21256,7 @@ Timeline Area
 }
 
 .bg-cta-modern {
-  background-image: url(http://localhost:5175/xt/assets/main/images/call-to-action/02.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/call-to-action/02.jpg);
   height: 290px;
   display: flex;
   align-items: center;
@@ -24191,7 +24191,7 @@ iframe {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/icons/noise.gif);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/icons/noise.gif);
   z-index: -1;
   background-color: #121214;
   opacity: 0.03;
@@ -24377,7 +24377,7 @@ iframe {
 }
 
 #anywhere-home {
-  cursor: url(http://localhost:5175/xt/assets/main/images/icons/close.png), auto;
+  cursor: url(http://192.168.1.178:5173/xt/assets/main/images/icons/close.png), auto;
   background: #0e1013;
   position: fixed;
   width: 100%;
@@ -28349,7 +28349,7 @@ iframe {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/icons/noise.gif);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/icons/noise.gif);
   z-index: -1;
   background-color: #121214;
   opacity: 0.03;
@@ -29052,7 +29052,7 @@ iframe {
   top: 0;
   left: -65px;
   z-index: -1;
-  background-image: url(http://localhost:5175/xt/assets/main/images/shape/quote.svg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/shape/quote.svg);
   background-repeat: no-repeat, repeat;
   width: 52px;
   height: 44px;
@@ -30159,7 +30159,7 @@ ul.categorys-widget-stndard li span {
 }
 
 .footer-style-3 .tmp-call-to-action.style-8 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/body_bg.png);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/body_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -30181,7 +30181,7 @@ ul.categorys-widget-stndard li span {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/patern.svg) !important;
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/patern.svg) !important;
   z-index: 0;
   opacity: 0.05;
 }
@@ -30255,7 +30255,7 @@ ul.categorys-widget-stndard li span {
 }
 
 .bg-line-animatoin-area-global {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/global-line.png);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/global-line.png);
   animation: ShapeAnim 80s linear infinite;
   height: 30px;
   width: 100%;
@@ -31878,55 +31878,55 @@ ul.categorys-widget-stndard li span {
 }
 
 .slider-bg-image.bg-image-1 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-1.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-1.html);
 }
 
 .slider-bg-image.bg-image2 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/call-to-action/bg-image-1.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/call-to-action/bg-image-1.html);
 }
 
 .slider-bg-image.bg-image3 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-3.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-3.html);
 }
 
 .slider-bg-image.bg-image4 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg-video/bg-image-4.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg-video/bg-image-4.jpg);
 }
 
 .slider-bg-image.bg-image5 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-4.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-4.html);
 }
 
 .slider-bg-image.bg-image5 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-5.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-5.html);
 }
 
 .slider-bg-image.bg-image6 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-6.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-6.html);
 }
 
 .slider-bg-image.bg-image10 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-10.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-10.jpg);
 }
 
 .slider-bg-image.bg-image11 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/bg-image-11.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/bg-image-11.html);
 }
 
 .slider-bg-image.bg-image13 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-13.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-13.html);
 }
 
 .slider-bg-image.bg-image14 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-14.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-14.html);
 }
 
 .slider-bg-image.bg-image15 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-15.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-15.html);
 }
 
 .slider-bg-image.bg-image16 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/slider-bg/bg-image-16.html);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/slider-bg/bg-image-16.html);
 }
 
 /* ----------------------
@@ -32377,18 +32377,18 @@ Slider Style New
 }
 
 .tmp-slider-style-1 {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/body_bg.png);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/body_bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
 .tmp-slider-style-1.with-bg-tin {
-  background-image: url(http://localhost:5175/xt/assets/main/images/shape/light.svg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/shape/light.svg);
 }
 
 body.tmp-body-star::before {
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/giphy.gif);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/giphy.gif);
   background-repeat: repeat;
   opacity: 0.05;
   background-color: transparent;
@@ -32400,7 +32400,7 @@ body.tmp-body-star::before {
 }
 
 .shape-left-svg {
-  background-image: url(http://localhost:5175/xt/assets/main/images/shape/shape-02.png);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/shape/shape-02.png);
   background-position: top left;
   background-repeat: no-repeat;
   position: absolute;
@@ -32450,7 +32450,7 @@ body.tmp-body-star::before {
   display: flex;
   align-items: center;
   height: 850px;
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/01.webp);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/01.webp);
 }
 
 @media only screen and (max-width: 991px) {
@@ -32525,7 +32525,7 @@ body.tmp-body-star::before {
 .bg-finance-video-thumb {
   position: relative;
   height: 850px;
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/finance-large.jpg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/finance-large.jpg);
 }
 
 @media only screen and (max-width: 767px) {
@@ -33773,7 +33773,7 @@ body.tmp-body-star::before {
 }
 
 .tmp-slider-style-banner-tin {
-  background-image: url(http://localhost:5175/xt/assets/main/images/shape/light.svg);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/shape/light.svg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -34879,7 +34879,7 @@ body.tmp-body-star::before {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/icons/noise.gif);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/icons/noise.gif);
   z-index: -1;
   background-color: rebeccapurple;
   opacity: 0.03;
@@ -35693,7 +35693,7 @@ body.tmp-body-star::before {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(http://localhost:5175/xt/assets/main/images/bg/patern.svg) !important;
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/bg/patern.svg) !important;
   z-index: -1;
   opacity: 0.03;
 }
@@ -36568,7 +36568,7 @@ body.tmp-body-star::before {
 }
 
 .active-light-mode .tmp-slider-style-banner-tin {
-  background-image: url(http://localhost:5175/xt/assets/main/images/shape/03.webp);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/shape/03.webp);
 }
 
 .active-light-mode .breadcrumb-inner ul.page-list li a {
@@ -36739,7 +36739,7 @@ body.tmp-body-star::before {
 }
 
 .active-light-mode .tmp-slider-style-1.with-bg-tin {
-  background-image: url(http://localhost:5175/xt/assets/main/images/shape/03.webp);
+  background-image: url(http://192.168.1.178:5173/xt/assets/main/images/shape/03.webp);
 }
 
 .active-light-mode .cursor-inner {

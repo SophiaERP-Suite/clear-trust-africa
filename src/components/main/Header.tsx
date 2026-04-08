@@ -179,28 +179,10 @@ const Header = () => {
                       : (
                         <div className="get-started-box">
                           <li>
-                            <NavLink to="#" className="tmp-btn round  get-started-btn">
+                            <NavLink to={"/register"} className="tmp-btn round get-started-btn">
                               Get Started
                             </NavLink>
                           </li>
-                          <ul>
-                            <li>
-                              <Link
-                                to={"/register"}
-                                onClick={handleRegisterChange("agent")}
-                              >
-                                As Agent
-                              </Link>
-                            </li>
-                            <li>
-                              <Link
-                                to={"/register"}
-                                onClick={handleRegisterChange("employer")}
-                              >
-                                As Employer
-                              </Link>
-                            </li>
-                          </ul>
                         </div>
                         )
                     }

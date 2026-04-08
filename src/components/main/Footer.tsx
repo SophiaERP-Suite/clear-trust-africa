@@ -43,9 +43,6 @@ const Footer = () => {
                     <li>
                       <NavLink to="/request">Request</NavLink>
                     </li>
-                    <li>
-                      <NavLink to="#">Pricing</NavLink>
-                    </li>
                   </ul>
                 </div>
               </div>
@@ -55,9 +52,6 @@ const Footer = () => {
                 <h4 className="title">Services</h4>
                 <div className="inner">
                   <ul className="footer-link link-hover">
-                    <li>
-                      <NavLink to="#">How It Works</NavLink>
-                    </li>
                     <li>
                       <NavLink to="/services#basic-check">Basic CTA Check</NavLink>
                     </li>
@@ -122,7 +116,7 @@ const Footer = () => {
                     <a href="/privacy-policy">Privacy Policy</a>
                   </li>
                   <li>
-                    <a href="/terms-and-condition">Terms And Condition</a>
+                    <a href="/terms-and-condition">Terms And Conditions</a>
                   </li>
                   <li>
                     <a href="/contact">Contact Us</a>
