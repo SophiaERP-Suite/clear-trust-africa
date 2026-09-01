@@ -186,7 +186,7 @@ export const handleVerifyUser = async (
 
       switch (user.organisation.organisationType.name) {
         case "Employer":
-          window.location.replace(`http://localhost:5175/xt/cta_emp/auth-bridge?token=${token}`);
+          window.location.replace(`http://localhost:5173/xt/cta_emp/auth-bridge?token=${token}`);
           break;
 
         case "Owner":
@@ -194,7 +194,7 @@ export const handleVerifyUser = async (
           break;
 
         case "Agent":
-          window.location.replace(`http://localhost:5175/xt/cta_emp/auth-bridge?token=${token}`);
+          window.location.replace(`http://localhost:5173/xt/cta_emp/auth-bridge?token=${token}`);
           break;
 
         default:
